@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InkHouse Studio - Estúdio de Tatuagem</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonte Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho fixo -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/logo.png" alt="InkHouse Studio Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#styles">Estilos</a></li>
+                    <li><a href="#artists">Tatuadores</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Arte na pele, <span>memórias para sempre</span></h1>
+            <p>Transformamos suas ideias em arte permanente com técnica, criatividade e segurança</p>
+            <a href="#contact" class="btn btn-primary">Agende sua sessão hoje</a>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+    <!-- Portfólio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nosso <span>Portfólio</span></h2>
+                <p>Conheça alguns dos trabalhos realizados pelo nosso time de artistas</p>
+            </div>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="realismo">Realismo</button>
+                <button class="filter-btn" data-filter="oldschool">Old School</button>
+                <button class="filter-btn" data-filter="minimalista">Minimalista</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Imagens do portfólio serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Estilos Section -->
+    <section id="styles" class="styles">
+        <div class="container">
+            <div class="section-header">
+                <h2>Estilos de <span>Tatuagem</span></h2>
+                <p>Descubra o estilo que combina com você</p>
+            </div>
+
+            <div class="styles-grid">
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Realismo</h3>
+                    <p>Tatuagens que reproduzem imagens com alto nível de detalhes, semelhantes a fotografias.</p>
+                </div>
+
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h3>Old School</h3>
+                    <p>Estilo clássico com linhas grossas, cores vibrantes e temas tradicionais como âncoras e rosas.</p>
+                </div>
+
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Minimalista</h3>
+                    <p>Designs simples e elegantes, com linhas finas e poucos detalhes, perfeitos para tatuagens discretas.</p>
+                </div>
+
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Oriental</h3>
+                    <p>Inspirado na arte asiática, com dragões, carpas e flores de cerejeira em composições elaboradas.</p>
+                </div>
+
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Aquarela</h3>
+                    <p>Técnica que imita pinturas em aquarela, com cores vibrantes e efeitos de respingos.</p>
+                </div>
+
+                <div class="style-card">
+                    <div class="style-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3>Blackwork</h3>
+                    <p>Trabalhos predominantemente em preto, com padrões geométricos e sombreamentos intensos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tatuadores Section -->
+    <section id="artists" class="artists">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos <span>Tatuadores</span></h2>
+                <p>Conheça os artistas que darão vida à sua tatuagem</p>
+            </div>
+
+            <div class="artists-grid">
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="images/artist1.png" alt="Tatuador Alex Silva">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Alex Silva</h3>
+                        <p class="specialty">Especialidade: Realismo</p>
+                        <p class="bio">Com mais de 10 anos de experiência, Alex é especialista em retratos e realismo.</p>
+                        <button class="btn btn-outline artist-modal-btn" data-artist="alex">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="images/artist2.png" alt="Tatuadora Mariana Costa">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Mariana Costa</h3>
+                        <p class="specialty">Especialidade: Old School</p>
+                        <p class="bio">Apaixonada pelo estilo tradicional, Mari cria designs únicos e cheios de personalidade.</p>
+                        <button class="btn btn-outline artist-modal-btn" data-artist="mariana">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="images/artist3.png" alt="Tatuador Lucas Mendes">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Lucas Mendes</h3>
+                        <p class="specialty">Especialidade: Minimalista</p>
+                        <p class="bio">Especialista em linhas finas e designs minimalistas com um toque contemporâneo.</p>
+                        <button class="btn btn-outline artist-modal-btn" data-artist="lucas">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Solicite um <span>Orçamento</span></h2>
+                <p>Preencha o formulário abaixo e entraremos em contato</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form id="quote-form">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="style">Estilo desejado</label>
+                            <select id="style" name="style" required>
+                                <option value="">Selecione um estilo</option>
+                                <option value="realismo">Realismo</option>
+                                <option value="oldschool">Old School</option>
+                                <option value="minimalista">Minimalista</option>
+                                <option value="oriental">Oriental</option>
+                                <option value="aquarela">Aquarela</option>
+                                <option value="blackwork">Blackwork</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="size">Tamanho aproximado</label>
+                            <select id="size" name="size" required>
+                                <option value="">Selecione um tamanho</option>
+                                <option value="pequeno">Pequeno (até 5cm)</option>
+                                <option value="medio">Médio (5-15cm)</option>
+                                <option value="grande">Grande (15-30cm)</option>
+                                <option value="muito-grande">Muito grande (acima de 30cm)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Descreva sua ideia</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar orçamento</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua das Artes, 123 - Centro<br>São Paulo, SP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@inkhousestudio.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de funcionamento</h4>
+                            <p>Segunda a Sábado: 10h às 20h<br>Domingos: Fechado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="InkHouse Studio Logo">
+                    <p>Arte na pele, memórias para sempre</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Horário de funcionamento</h4>
+                    <p>Segunda a Sexta: 10h às 20h</p>
+                    <p>Sábado: 10h às 18h</p>
+                    <p>Domingo: Fechado</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua das Artes, 123 - Centro, São Paulo</p>
+                    <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@inkhousestudio.com.br</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 InkHouse Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para artistas -->
+    <div class="modal" id="artist-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Conteúdo do modal será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para imagens do portfólio -->
+    <div class="modal" id="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="/placeholder.svg" alt="Tatuagem em destaque" id="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de voltar ao topo -->
+    <button id="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

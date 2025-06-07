@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Prado Fotografia - Capturando momentos que contam histórias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed Navigation Menu -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Lucas Prado</h2>
+                <span>Fotografia</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Capturando momentos que contam histórias</h1>
+            <p class="hero-subtitle">Fotografia profissional com sensibilidade artística e técnica apurada</p>
+            <a href="#portfolio" class="cta-button">Ver Portfólio</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfólio</h2>
+            <p class="section-subtitle">Cada imagem conta uma história única</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="casamento">Casamento</button>
+                <button class="filter-btn" data-filter="eventos">Eventos</button>
+                <button class="filter-btn" data-filter="ensaio">Ensaio</button>
+                <button class="filter-btn" data-filter="newborn">Newborn</button>
+            </div>
+
+            <div class="gallery">
+                <div class="gallery-item" data-category="casamento">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Casamento 1">
+                    <div class="gallery-overlay">
+                        <h3>Casamento Romântico</h3>
+                        <p>Ana & Carlos</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="eventos">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="Evento 1">
+                    <div class="gallery-overlay">
+                        <h3>Evento Corporativo</h3>
+                        <p>Lançamento de Produto</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ensaio">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&h=400&fit=crop" alt="Ensaio 1">
+                    <div class="gallery-overlay">
+                        <h3>Ensaio Casal</h3>
+                        <p>Pré-Wedding</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="newborn">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="Newborn 1">
+                    <div class="gallery-overlay">
+                        <h3>Newborn</h3>
+                        <p>Primeiros Dias</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="casamento">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&h=400&fit=crop" alt="Casamento 2">
+                    <div class="gallery-overlay">
+                        <h3>Cerimônia Íntima</h3>
+                        <p>Maria & João</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ensaio">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Ensaio 2">
+                    <div class="gallery-overlay">
+                        <h3>Ensaio Individual</h3>
+                        <p>Retratos Autorais</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="eventos">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop" alt="Evento 2">
+                    <div class="gallery-overlay">
+                        <h3>Festa de Aniversário</h3>
+                        <p>Celebração Especial</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="newborn">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&h=400&fit=crop" alt="Newborn 2">
+                    <div class="gallery-overlay">
+                        <h3>Sessão Newborn</h3>
+                        <p>Momentos Únicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <p class="section-subtitle">Pacotes personalizados para cada momento especial</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Casamento</h3>
+                    <p>Cobertura completa do seu grande dia, desde os preparativos até a festa.</p>
+                    <ul class="service-features">
+                        <li>8 horas de cobertura</li>
+                        <li>300+ fotos editadas</li>
+                        <li>Álbum digital</li>
+                        <li>Ensaio pré-wedding</li>
+                    </ul>
+                    <div class="service-price">A partir de R$ 2.500</div>
+                    <button class="service-btn" onclick="openQuoteModal('Casamento')">Solicitar Orçamento</button>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-badge">Mais Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Ensaio Fotográfico</h3>
+                    <p>Sessões personalizadas para casais, famílias ou individuais.</p>
+                    <ul class="service-features">
+                        <li>2 horas de sessão</li>
+                        <li>50+ fotos editadas</li>
+                        <li>Galeria online</li>
+                        <li>Consultoria de styling</li>
+                    </ul>
+                    <div class="service-price">A partir de R$ 800</div>
+                    <button class="service-btn" onclick="openQuoteModal('Ensaio')">Solicitar Orçamento</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Newborn</h3>
+                    <p>Registrando os primeiros momentos do seu bebê com delicadeza e carinho.</p>
+                    <ul class="service-features">
+                        <li>3 horas de sessão</li>
+                        <li>40+ fotos editadas</li>
+                        <li>Props inclusos</li>
+                        <li>Ambiente climatizado</li>
+                    </ul>
+                    <div class="service-price">A partir de R$ 600</div>
+                    <button class="service-btn" onclick="openQuoteModal('Newborn')">Solicitar Orçamento</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-subtitle">O que nossos clientes dizem</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Lucas capturou perfeitamente a essência do nosso casamento. Cada foto conta nossa história de amor de forma única e emocionante."</p>
+                    <div class="testimonial-author">
+                        <strong>Ana & Carlos Silva</strong>
+                        <span>Casamento</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Profissional excepcional! O ensaio newborn da nossa filha ficou simplesmente perfeito. Recomendo de olhos fechados."</p>
+                    <div class="testimonial-author">
+                        <strong>Mariana Santos</strong>
+                        <span>Newborn</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Sensibilidade artística incrível! Nosso ensaio pré-wedding superou todas as expectativas. Fotos lindas e naturais."</p>
+                    <div class="testimonial-author">
+                        <strong>Roberto & Juliana</strong>
+                        <span>Ensaio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Vamos conversar sobre o seu projeto</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@lucaspradofoto.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/5511999999999" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Selecione o serviço</option>
+                            <option value="casamento">Casamento</option>
+                            <option value="ensaio">Ensaio Fotográfico</option>
+                            <option value="newborn">Newborn</option>
+                            <option value="eventos">Eventos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Conte-me mais sobre seu projeto" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Lucas Prado</h3>
+                    <span>Fotografia</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/5511999999999" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lucas Prado Fotografia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Budget Request Modal -->
+    <div id="quote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Solicitar Orçamento</h2>
+            <form id="quote-form">
+                <div class="form-group">
+                    <input type="text" id="quote-name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="quote-email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="quote-phone" placeholder="Seu telefone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="quote-service" placeholder="Serviço" readonly>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="quote-date" placeholder="Data do evento">
+                </div>
+                <div class="form-group">
+                    <textarea id="quote-details" placeholder="Detalhes do evento" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Solicitar Orçamento</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

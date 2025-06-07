@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Vitta - Personal Trainer | Transforme seu corpo em 90 dias</title>
+    <meta name="description" content="Personal Trainer especializado em transformação corporal. Acompanhamento personalizado e resultados garantidos em 90 dias.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>CARLOS <span>VITTA</span></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    TRANSFORME SEU <span class="highlight">CORPO</span><br>
+                    EM <span class="highlight">90 DIAS</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Acompanhamento personalizado com o personal trainer que já transformou mais de 500 vidas
+                </p>
+                <button class="cta-button" onclick="scrollToSection('contato')">
+                    <i class="fas fa-fire"></i>
+                    QUERO COMEÇAR
+                </button>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Alunos Transformados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">90</span>
+                        <span class="stat-label">Dias para Resultados</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/placeholder.svg?height=600&width=500" alt="Carlos Vitta Personal Trainer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <h2 class="section-title">POR QUE ESCOLHER O <span>ACOMPANHAMENTO PERSONALIZADO?</span></h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Treino Personalizado</h3>
+                    <p>Exercícios específicos para seu biotipo e objetivos, maximizando seus resultados</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Dieta Individualizada</h3>
+                    <p>Plano alimentar adaptado ao seu estilo de vida e preferências alimentares</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Acompanhamento Constante</h3>
+                    <p>Monitoramento diário via WhatsApp e ajustes semanais no seu programa</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Resultados Garantidos</h3>
+                    <p>Metodologia comprovada com mais de 500 transformações realizadas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexibilidade de Horários</h3>
+                    <p>Treinos adaptados à sua rotina, seja em casa, academia ou ao ar livre</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Motivação Constante</h3>
+                    <p>Suporte emocional e motivacional para manter você focado nos seus objetivos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="plans">
+        <div class="container">
+            <h2 class="section-title">ESCOLHA SEU <span>PLANO DE TRANSFORMAÇÃO</span></h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>MENSAL</h3>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">297</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Dieta individualizada</li>
+                        <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Avaliação mensal</li>
+                    </ul>
+                    <button class="plan-button" onclick="scrollToSection('contato')">ESCOLHER PLANO</button>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="plan-badge">MAIS POPULAR</div>
+                    <div class="plan-header">
+                        <h3>TRIMESTRAL</h3>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">247</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="plan-discount">3x R$ 741 (economize R$ 150)</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Dieta individualizada</li>
+                        <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Avaliação quinzenal</li>
+                        <li><i class="fas fa-check"></i> Receitas exclusivas</li>
+                        <li><i class="fas fa-check"></i> Vídeos de exercícios</li>
+                    </ul>
+                    <button class="plan-button" onclick="scrollToSection('contato')">ESCOLHER PLANO</button>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>ANUAL</h3>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">197</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="plan-discount">12x R$ 197 (economize R$ 1.200)</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Dieta individualizada</li>
+                        <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Avaliação semanal</li>
+                        <li><i class="fas fa-check"></i> Receitas exclusivas</li>
+                        <li><i class="fas fa-check"></i> Vídeos de exercícios</li>
+                        <li><i class="fas fa-check"></i> Consultoria nutricional</li>
+                        <li><i class="fas fa-check"></i> Acesso ao app exclusivo</li>
+                    </ul>
+                    <button class="plan-button" onclick="scrollToSection('contato')">ESCOLHER PLANO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O QUE DIZEM MEUS <span>ALUNOS</span></h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Em 3 meses perdi 15kg e ganhei muito mais disposição. O Carlos é um profissional incrível, sempre presente e motivador!"</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Maria Silva">
+                                <div>
+                                    <h4>Maria Silva</h4>
+                                    <span>Perdeu 15kg em 3 meses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Nunca imaginei que conseguiria ganhar massa muscular tão rápido. O treino personalizado fez toda a diferença!"</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=60&width=60" alt="João Santos">
+                                <div>
+                                    <h4>João Santos</h4>
+                                    <span>Ganhou 8kg de massa muscular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Além da transformação física, mudei completamente meus hábitos. Hoje tenho uma vida muito mais saudável!"</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Ana Costa">
+                                <div>
+                                    <h4>Ana Costa</h4>
+                                    <span>Transformação completa em 6 meses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeTestimonial(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentTestimonial(1)"></span>
+                        <span class="dot" onclick="currentTestimonial(2)"></span>
+                        <span class="dot" onclick="currentTestimonial(3)"></span>
+                    </div>
+                    <button class="carousel-btn next" onclick="changeTestimonial(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">VEJA UM EXEMPLO DE <span>TREINO PERSONALIZADO</span></h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Treino Personalizado - Carlos Vitta"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">AGENDE SUA <span>CONSULTA GRATUITA</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Pronto para transformar sua vida?</h3>
+                    <p>Preencha o formulário ao lado e vamos conversar sobre seus objetivos. A primeira consulta é totalmente gratuita!</p>
+                    <div class="contact-benefits">
+                        <div class="contact-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Avaliação física completa</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Plano personalizado</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sem compromisso</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="objetivo">Qual seu principal objetivo?</label>
+                        <select id="objetivo" name="objetivo" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="emagrecimento">Emagrecimento</option>
+                            <option value="ganho-massa">Ganho de massa muscular</option>
+                            <option value="definicao">Definição muscular</option>
+                            <option value="condicionamento">Condicionamento físico</option>
+                            <option value="reabilitacao">Reabilitação</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="disponibilidade">Disponibilidade para treinar</label>
+                        <select id="disponibilidade" name="disponibilidade" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="manha">Manhã (6h às 12h)</option>
+                            <option value="tarde">Tarde (12h às 18h)</option>
+                            <option value="noite">Noite (18h às 22h)</option>
+                            <option value="flexivel">Horário flexível</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-calendar-check"></i>
+                        AGENDAR CONSULTA GRATUITA
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CARLOS <span>VITTA</span></h3>
+                    <p>Personal Trainer especializado em transformação corporal com mais de 5 anos de experiência.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 99999-9999</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@carlosvitta.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@carlosvitta_personal</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Localização</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo - SP<br>Atendimento em domicílio<br>e academias parceiras</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horário de Atendimento</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Segunda a Sexta: 6h às 22h<br>Sábado: 7h às 18h<br>Domingo: 8h às 16h</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Carlos Vitta Personal Trainer. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
