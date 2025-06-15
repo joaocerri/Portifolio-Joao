@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Garden Cerri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Substituir a div do logo por um link -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_-twTPHhUyzsUTfggS988HTh0g15Obdf.png" alt="Garden Cerri" class="logo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loja.html" class="nav-link">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="atelie.html" class="nav-link">Ateliê das Flores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="paisagismo.html" class="nav-link">Paisagismo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="producao.html" class="nav-link">Produção</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="restaurante.html" class="nav-link">Cantinho Mineiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="corporativo.html" class="nav-link">Venda Corporativa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loja-online.html" class="nav-link">Loja Online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link active">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Entre em Contato</h1>
+            <p class="page-subtitle">Estamos aqui para ajudar você a criar o jardim dos seus sonhos. Entre em contato conosco e descubra como podemos transformar seu espaço.</p>
+        </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="contact-form">
+                    <h3 style="color: #ACCC0C; margin-bottom: 1.5rem;">Envie sua Mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="loja">Loja</option>
+                                <option value="atelie">Ateliê das Flores</option>
+                                <option value="paisagismo">Paisagismo</option>
+                                <option value="producao">Produção Vegetal</option>
+                                <option value="restaurante">Cantinho Mineiro</option>
+                                <option value="corporativo">Venda Corporativa</option>
+                                <option value="loja-online">Loja Online</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="content-text">
+                    <h3>Fale Conosco</h3>
+                    <p>Nossa equipe está sempre pronta para atender você com carinho e profissionalismo. Seja para tirar dúvidas, solicitar orçamentos ou agendar uma visita, estamos aqui para ajudar.</p>
+                    <p>Responderemos sua mensagem o mais breve possível, geralmente em até 24 horas.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="color: #ACCC0C; margin-bottom: 1rem;">Horário de Funcionamento</h4>
+                        <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
+                        <p><strong>Sábado:</strong> 8h às 14h</p>
+                        <p><strong>Domingo:</strong> 8h às 12h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="icon">📍</div>
+                    <h4>Endereço</h4>
+                    <p>R. 23, 549<br>Jardim Rio Claro, Rio Claro - SP<br>CEP: 13503-753</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h4>Telefone</h4>
+                    <p>(19) 30243382</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">✉️</div>
+                    <h4>E-mail</h4>
+                    <p>comercial@<br>gardencerri.com.br</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon">🌐</div>
+                    <h4>Redes Sociais</h4>
+                    <p>@gardencerri<br>Garden Cerri</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3 style="color: #ACCC0C; margin-bottom: 1.5rem;">Nossa Localização</h3>
+                <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8234567890123!2d-47.5612345!3d-22.4123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%2023%2C%20549%20-%20Jardim%20Rio%20Claro%2C%20Rio%20Claro%20-%20SP%2C%2013503-753!5e0!3m2!1spt-BR!2sbr!4v1654789542873!5m2!1spt-BR!2sbr" 
+    width="100%" 
+    height="450" 
+    style="border:0; border-radius:10px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Substituir todo o conteúdo do footer-content -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20branca-DtmB5xYHmd5rZQv2LFgRy7I6Y5xGig.png" alt="Garden Cerri" class="logo-white">
+                    </div>
+                    <p>Cultivando beleza e tradição há mais de 12 anos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="atelie.html">Ateliê das Flores</a></li>
+                        <li><a href="paisagismo.html">Paisagismo</a></li>
+                        <li><a href="producao.html">Produção</a></li>
+                        <li><a href="restaurante.html">Cantinho Mineiro</a></li>
+                        <li><a href="corporativo.html">Venda Corporativa</a></li>
+                        <li><a href="loja-online.html">Loja Online</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="contact-line">
+                        <span class="contact-icon">📍</span>
+                        <p>R. 23, 549<br>Jardim Rio Claro, Rio Claro - SP<br>CEP: 13503-753</p>
+                    </div>
+                    <div class="contact-line">
+                        <span class="contact-icon">📞</span>
+                        <p>(19) 30243382</p>
+                    </div>
+                    <div class="contact-line">
+                        <span class="contact-icon">✉️</span>
+                        <p>contato@gardencerri.com.br</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">📱</a>
+                        <a href="#" class="social-link">📘</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Garden Cerri — Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm(this)) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                addLoadingState(submitBtn);
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    this.reset();
+                }, 2000);
+            } else {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+            }
+        });
+    </script>
+</body>
+</html>

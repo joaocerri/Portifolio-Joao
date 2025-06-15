@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro Pessoal</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>FinanceTracker</h1>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Financial Summary Cards -->
+            <section class="summary-section">
+                <div class="summary-cards">
+                    <div class="card income-card">
+                        <div class="card-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Entradas</h3>
+                            <p class="card-value" id="totalIncome">R$ 0,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card expense-card">
+                        <div class="card-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Saídas</h3>
+                            <p class="card-value" id="totalExpense">R$ 0,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card balance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Saldo Atual</h3>
+                            <p class="card-value" id="totalBalance">R$ 0,00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction Form -->
+            <section class="form-section">
+                <div class="form-container">
+                    <h2><i class="fas fa-plus-circle"></i> Nova Transação</h2>
+                    <form id="transactionForm" class="transaction-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="description">Descrição</label>
+                                <input type="text" id="description" name="description" placeholder="Ex: Salário, Mercado, Conta de luz..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Valor (R$)</label>
+                                <input type="number" id="amount" name="amount" step="0.01" placeholder="0,00" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Data</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo</label>
+                                <div class="type-buttons">
+                                    <button type="button" class="type-btn income-btn active" data-type="income">
+                                        <i class="fas fa-plus"></i> Entrada
+                                    </button>
+                                    <button type="button" class="type-btn expense-btn" data-type="expense">
+                                        <i class="fas fa-minus"></i> Saída
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-save"></i> Adicionar Transação
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Transactions Table -->
+            <section class="table-section">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2><i class="fas fa-list"></i> Histórico de Transações</h2>
+                        <div class="table-filters">
+                            <select id="typeFilter" class="filter-select">
+                                <option value="all">Todas</option>
+                                <option value="income">Entradas</option>
+                                <option value="expense">Saídas</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="table-wrapper">
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Tipo</th>
+                                    <th>Valor</th>
+                                    <th>Data</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsTableBody">
+                                <!-- Transactions will be inserted here -->
+                            </tbody>
+                        </table>
+                        
+                        <div class="empty-state" id="emptyState">
+                            <i class="fas fa-inbox"></i>
+                            <p>Nenhuma transação encontrada</p>
+                            <small>Adicione sua primeira transação usando o formulário acima</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FinanceTracker. Desenvolvido com <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

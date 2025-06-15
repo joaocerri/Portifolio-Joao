@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polo Sul - Moda para toda a família</title>
+    <meta name="description" content="Da nossa família para a sua, venha conhecer a Polo Sul e descubra moda para toda a família!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+    <header id="navbar" class="fixed w-full z-50 transition-transform duration-300 bg-black text-white">
+        <div class="container mx-auto px-0 py-1 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#home" class="relative h-20 w-64 ml-0 pl-0 block">
+                    <img src="images/logobranco.png" alt="Polo Sul Logo" class="h-full w-full object-contain object-left">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 mr-4">
+                <a href="#home" class="hover:text-gray-300 transition-colors duration-200">Home</a>
+                <a href="#sobre" class="hover:text-gray-300 transition-colors duration-200">Sobre Nós</a>
+                <a href="#categorias" class="hover:text-gray-300 transition-colors duration-200">Vitrine</a>
+                <a href="#redes" class="hover:text-gray-300 transition-colors duration-200">Redes Sociais</a>
+                <a href="#contato" class="hover:text-gray-300 transition-colors duration-200">Contato</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden mr-4">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-black hidden">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="block py-2 hover:text-gray-300 transition-colors duration-200 mobile-menu-link">Home</a>
+                <a href="#sobre" class="block py-2 hover:text-gray-300 transition-colors duration-200 mobile-menu-link">Sobre Nós</a>
+                <a href="#categorias" class="block py-2 hover:text-gray-300 transition-colors duration-200 mobile-menu-link">Vitrine</a>
+                <a href="#redes" class="block py-2 hover:text-gray-300 transition-colors duration-200 mobile-menu-link">Redes Sociais</a>
+                <a href="#contato" class="block py-2 hover:text-gray-300 transition-colors duration-200 mobile-menu-link">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen bg-white">
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen bg-black text-white">
+            <div class="absolute inset-0 opacity-60">
+                <img src="images/familia.png" alt="Família Polo Sul" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="relative container mx-auto px-4 h-full flex flex-col justify-end items-start pb-16">
+                <div class="max-w-2xl animate-fade-in-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">POLO SUL</h1>
+                    <p class="text-xl md:text-2xl mb-8">
+                        Da nossa família para a sua, venha conhecer a Polo Sul e descubra moda para toda a família!
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#categorias" class="bg-white text-black hover:bg-gray-200 transition-all duration-300 px-6 py-3 rounded font-medium">Ver Coleção</a>
+                        <a href="#contato" class="border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-6 py-3 rounded font-medium">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Sobre Nós</h2>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm">
+                        <p class="text-lg mb-6 leading-relaxed">
+                            Desde 1970, a Polo Sul tem se destacado no mundo da moda, trazendo estilo e conforto para toda a família.
+                            Fundada por Antônio e Jeni, a loja começou como um pequeno sonho que cresceu com muito amor e dedicação. Com
+                            o passar dos anos, a paixão pela moda e pelo atendimento ao cliente transformou a Polo Sul em um verdadeiro
+                            ícone na comunidade.
+                        </p>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            Hoje, a tradição continua viva com a ajuda dos filhos Fábio, Fabiana e Fabiola, que trouxeram novas ideias e
+                            energia para a empresa familiar. Juntos, eles trabalham para manter o legado da família, oferecendo produtos
+                            de qualidade que atendem às necessidades de todos os membros da família.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Na Polo Sul, acreditamos que cada peça de roupa conta uma história. Por isso, nos dedicamos a proporcionar
+                            moda acessível e atemporal, sempre com um toque especial. Nossa missão é fazer com que cada cliente se sinta
+                            parte da nossa família.
+                        </p>
+                    </div>
+
+                    <div class="relative aspect-square w-full overflow-hidden rounded-lg shadow-md">
+                        <img src="images/familia-loja.png" alt="Família Polo Sul na loja" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Carousel -->
+        <section id="categorias" class="relative h-screen w-full overflow-hidden bg-white">
+            <div id="category-carousel" class="relative h-full w-full">
+                <!-- Slides -->
+                <div class="category-slide active" data-category="masculina">
+                    <a href="#vitrine-masculina" class="block h-full w-full">
+                        <div class="relative h-full w-full flex items-center justify-center">
+                            <img src="images/moda-masculina.png" alt="Moda Masculina" class="max-h-full max-w-full object-contain">
+                        </div>
+                    </a>
+                </div>
+                <div class="category-slide" data-category="feminina">
+                    <a href="#vitrine-feminina" class="block h-full w-full">
+                        <div class="relative h-full w-full flex items-center justify-center">
+                            <img src="images/moda-feminina.png" alt="Moda Feminina" class="max-h-full max-w-full object-contain">
+                        </div>
+                    </a>
+                </div>
+                <div class="category-slide" data-category="infantil">
+                    <a href="#vitrine-infantil" class="block h-full w-full">
+                        <div class="relative h-full w-full flex items-center justify-center">
+                            <img src="images/moda-infantil.png" alt="Moda Infantil" class="max-h-full max-w-full object-contain">
+                        </div>
+                    </a>
+                </div>
+                <div class="category-slide" data-category="calcados">
+                    <a href="#vitrine-calcados" class="block h-full w-full">
+                        <div class="relative h-full w-full flex items-center justify-center">
+                            <img src="images/moda-calcados-novo.png" alt="Calçados" class="max-h-full max-w-full object-contain">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button id="category-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black hover:bg-black/80 text-white border-black h-12 w-12 rounded-full flex items-center justify-center">
+                <i data-lucide="chevron-left" class="w-8 h-8 text-white"></i>
+            </button>
+
+            <button id="category-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black hover:bg-black/80 text-white border-black h-12 w-12 rounded-full flex items-center justify-center">
+                <i data-lucide="chevron-right" class="w-8 h-8 text-white"></i>
+            </button>
+
+            <!-- Indicators -->
+            <div class="absolute bottom-8 left-0 right-0 z-20 flex justify-center space-x-3">
+                <button class="category-indicator active w-3 h-3 rounded-full bg-black" data-slide="0"></button>
+                <button class="category-indicator w-3 h-3 rounded-full bg-black/50" data-slide="1"></button>
+                <button class="category-indicator w-3 h-3 rounded-full bg-black/50" data-slide="2"></button>
+                <button class="category-indicator w-3 h-3 rounded-full bg-black/50" data-slide="3"></button>
+            </div>
+        </section>
+
+        <!-- Product Showcases -->
+        <div class="bg-gray-50">
+            <!-- Moda Masculina -->
+            <section id="vitrine-masculina" class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Moda Masculina</h2>
+                <div class="product-showcase" data-category="masculina">
+                    <div class="relative py-8">
+                        <button class="product-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+
+                        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+                            <!-- Products will be inserted here by JavaScript -->
+                        </div>
+
+                        <button class="product-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center mt-8 space-x-2 product-indicators">
+                        <!-- Indicators will be inserted here by JavaScript -->
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <button class="product-prev-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+                            Anterior
+                        </button>
+                        <button class="product-next-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            Próximo
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Moda Feminina -->
+            <section id="vitrine-feminina" class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Moda Feminina</h2>
+                <div class="product-showcase" data-category="feminina">
+                    <div class="relative py-8">
+                        <button class="product-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+
+                        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+                            <!-- Products will be inserted here by JavaScript -->
+                        </div>
+
+                        <button class="product-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center mt-8 space-x-2 product-indicators">
+                        <!-- Indicators will be inserted here by JavaScript -->
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <button class="product-prev-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+                            Anterior
+                        </button>
+                        <button class="product-next-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            Próximo
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Moda Infantil -->
+            <section id="vitrine-infantil" class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Moda Infantil</h2>
+                <div class="product-showcase" data-category="infantil">
+                    <div class="relative py-8">
+                        <button class="product-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+
+                        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+                            <!-- Products will be inserted here by JavaScript -->
+                        </div>
+
+                        <button class="product-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center mt-8 space-x-2 product-indicators">
+                        <!-- Indicators will be inserted here by JavaScript -->
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <button class="product-prev-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+                            Anterior
+                        </button>
+                        <button class="product-next-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            Próximo
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calçados -->
+            <section id="vitrine-calcados" class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Calçados</h2>
+                <div class="product-showcase" data-category="calcados">
+                    <div class="relative py-8">
+                        <button class="product-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+
+                        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+                            <!-- Products will be inserted here by JavaScript -->
+                        </div>
+
+                        <button class="product-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300 w-10 h-10 rounded border flex items-center justify-center">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center mt-8 space-x-2 product-indicators">
+                        <!-- Indicators will be inserted here by JavaScript -->
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <button class="product-prev-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            <i data-lucide="chevron-left" class="w-4 h-4 mr-2"></i>
+                            Anterior
+                        </button>
+                        <button class="product-next-btn mx-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-4 py-2 border rounded flex items-center">
+                            Próximo
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-16">
+            <div id="redes" class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Contato</h2>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-4">Informações de Contato</h3>
+
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i data-lucide="phone" class="w-5 h-5 mr-3 text-gray-600"></i>
+                                    <span>(19) 3534-6168</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="phone" class="w-5 h-5 mr-3 text-gray-600"></i>
+                                    <span>(19) 97142-9434</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="mail" class="w-5 h-5 mr-3 text-gray-600"></i>
+                                    <span>contato@polosul.com.br</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-600 mt-1"></i>
+                                    <span>R. 8, 1537 - Santa Cruz, Rio Claro - SP, 13500-210</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <h3 class="text-xl font-semibold mb-4">Horário de Funcionamento</h3>
+                                <p>Segunda a Sexta: 9h às 16h</p>
+                                <p>Sábados: 9h às 15h</p>
+                                <p>Domingos e Feriados: Fechado</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-4">Redes Sociais</h3>
+
+                            <div class="grid gap-4">
+                                <a href="https://instagram.com/vemprapolosul" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-3 rounded flex items-center justify-center transition-colors">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                    </svg>
+                                    Instagram
+                                </a>
+
+                                <a href="https://facebook.com/vemprapolosul" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded flex items-center justify-center transition-colors">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.9 10.126-5.864 10.126-11.854z"/>
+                                    </svg>
+                                    Facebook
+                                </a>
+
+                                <a href="https://wa.me/5519996577889" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded flex items-center justify-center transition-colors">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                    WhatsApp
+                                </a>
+
+                                <div class="mt-4">
+                                    <h4 class="font-medium mb-2">Fale conosco pelo WhatsApp</h4>
+                                    <a href="https://wa.me/5519996577889" target="_blank" rel="noopener noreferrer" class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded flex items-center justify-center transition-colors">
+                                        <i data-lucide="message-square" class="w-5 h-5 mr-2"></i>
+                                        Iniciar Conversa
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">POLO SUL</h3>
+                    <p class="text-gray-300">
+                        Da nossa família para a sua, venha conhecer a Polo Sul e descubra moda para toda a família!
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#sobre" class="text-gray-300 hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#categorias" class="text-gray-300 hover:text-white transition-colors">Vitrines</a></li>
+                        <li><a href="#contato" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <address class="not-italic text-gray-300">
+                        <p>R. 8, 1537 - Santa Cruz,</p>
+                        <p>Rio Claro - SP, 13500-210</p>
+                        <p class="mt-2">(19) 3534-6168</p>
+                        <p>(19) 97142-9434</p>
+                        <p class="mt-2">contato@polosul.com.br</p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> Polo Sul. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

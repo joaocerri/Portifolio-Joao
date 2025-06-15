@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Cerri | Criação de Sites Profissionais que Vendem</title>
+    <meta name="description" content="Desenvolvimento de sites profissionais, responsivos e otimizados para conversão. Transformo sua ideia em um site que realmente vende.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header id="header">
+        <div class="container">
+            <nav id="nav">
+                <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Quem sou</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#projetos">Portfólio</a></li>
+                    <li><a href="#contato" class="btn-contato">Fale comigo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-slide-left">Sites profissionais que convertem visitantes em clientes</h1>
+                    <p class="animate-slide-left delay-1">Olá! Sou o João, desenvolvedor front-end. Crio sites que não apenas impressionam, mas que realmente geram vendas. Desenvolvimento web focado em resultados para o seu negócio.</p>
+                    <div class="hero-buttons animate-slide-left delay-2">
+                        <a href="#projetos" class="btn btn-primary interactive">Ver meu portfólio</a>
+                        <a href="#contato" class="btn btn-secondary interactive">Solicitar orçamento</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-right">
+                    <img src="/placeholder.svg?height=500&width=500" alt="João Gobato trabalhando" class="blob-shape">
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <a href="#sobre">
+                    <span>Role para descobrir</span>
+                    <i class="fas fa-chevron-down bounce"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Quem sou eu</span>
+                <h2>Desenvolvedor web apaixonado por criar sites que vendem</h2>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-img">
+                    <div class="img-container">
+                        <img src="./assets/joao-photo.png" alt="João Antonio Gobato Cerri" class="profile-img">
+                        <div class="shape-bg"></div>
+                    </div>
+                </div>
+                <div class="sobre-text">
+                    <h3>Prazer, João Cerri! 👋</h3>
+                    <p class="destaque">Transformando ideias em sites que geram resultados</p>
+                    <p>Sou desenvolvedor front-end especializado em criar sites que não apenas ficam bonitos, mas que realmente convertem visitantes em clientes. Com mais de 5 anos de experiência, já ajudei dezenas de empresas a aumentarem suas vendas online através de sites profissionais e otimizados.</p>
+                    <p>Meu foco é criar sites que carregam rápido, aparecem no Google e, principalmente, que fazem seu telefone tocar com novos clientes! 🚀</p>
+                    
+                    <div class="skills-container">
+                        <div class="skill-item animate-slide-up">
+                            <div class="skill-icon animate-float">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>Design Responsivo</h4>
+                                <p>Sites que funcionam perfeitamente em qualquer dispositivo</p>
+                            </div>
+                        </div>
+                        <div class="skill-item animate-slide-up">
+                            <div class="skill-icon animate-float">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>SEO Otimizado</h4>
+                                <p>Seu site aparecendo nas primeiras posições do Google</p>
+                            </div>
+                        </div>
+                        <div class="skill-item animate-slide-up">
+                            <div class="skill-icon animate-float">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>Foco em Conversão</h4>
+                                <p>Sites que transformam visitantes em clientes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contato" class="btn btn-primary mt-20">Quero meu site profissional</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Meus serviços</span>
+                <h2>Soluções completas para sua presença online</h2>
+                <p>Do planejamento ao lançamento, cuido de tudo para seu site ser um sucesso.</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card animate-scale">
+                    <div class="servico-icon animate-float">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Site Institucional</h3>
+                    <p>Site profissional para apresentar sua empresa, serviços e conquistar a confiança dos clientes. Ideal para estabelecer credibilidade online.</p>
+                    <ul class="servico-features">
+                        <li><i class="fas fa-check"></i> <span>Design moderno e profissional</span></li>
+                        <li><i class="fas fa-check"></i> <span>Totalmente responsivo</span></li>
+                        <li><i class="fas fa-check"></i> <span>Otimizado para SEO</span></li>
+                        <li><i class="fas fa-check"></i> <span>Formulário de contato integrado</span></li>
+                    </ul>
+                    <div class="servico-price">Entre em contato para agendar uma reunião</div>
+                    <a href="https://wa.me/5519999312628?text=Oi,%20João!%20Quero%20fazer%20um%20site%20com%20você.%20Podemos%20marcar%20uma%20reunião%20rápida%20pra%20conversar?" target="_blank" class="btn btn-secondary" data-service="Site Institucional">Quero meu site</a>
+                </div>
+                <div class="servico-card animate-scale">
+                    <div class="servico-icon animate-float">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Landing Page</h3>
+                    <p>Página de alta conversão para campanhas específicas, lançamentos ou captura de leads. Focada em um objetivo: converter visitantes em clientes.</p>
+                    <ul class="servico-features">
+                        <li><i class="fas fa-check"></i> <span>Design focado em conversão</span></li>
+                        <li><i class="fas fa-check"></i> <span>Carregamento ultra-rápido</span></li>
+                        <li><i class="fas fa-check"></i> <span>Integração com WhatsApp</span></li>
+                        <li><i class="fas fa-check"></i> <span>Métricas de conversão</span></li>
+                    </ul>
+                    <div class="servico-price">Entre em contato para agendar uma reunião</div>
+                    <a href="https://wa.me/5519999312628?text=Oi,%20João!%20Quero%20fazer%20um%20site%20com%20você.%20Podemos%20marcar%20uma%20reunião%20rápida%20pra%20conversar?" target="_blank" class="btn btn-secondary" data-service="Landing Page">Quero converter mais</a>
+                </div>
+                <div class="servico-card animate-scale">
+                    <div class="servico-icon animate-float">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção de Sites</h3>
+                    <p>Mantenha seu site sempre atualizado, seguro e funcionando perfeitamente. Alterações de conteúdo, atualizações de segurança e melhorias contínuas.</p>
+                    <ul class="servico-features">
+                        <li><i class="fas fa-check"></i> <span>Atualizações de conteúdo</span></li>
+                        <li><i class="fas fa-check"></i> <span>Backup automático</span></li>
+                        <li><i class="fas fa-check"></i> <span>Monitoramento de segurança</span></li>
+                        <li><i class="fas fa-check"></i> <span>Suporte técnico prioritário</span></li>
+                    </ul>
+                    <div class="servico-price">Entre em contato para agendar uma reunião</div>
+                    <a href="https://wa.me/5519999312628?text=Oi,%20João!%20Preciso%20de%20manutenção%20para%20meu%20site.%20Podemos%20conversar?" target="_blank" class="btn btn-secondary" data-service="Manutenção de Sites">Quero manutenção</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-shape"></div>
+    </section>
+
+    <!-- Como trabalho -->
+    <section id="processo" class="processo">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Meu processo</span>
+                <h2>Como eu trabalho</h2>
+                <p>Transparência e comunicação clara em todas as etapas</p>
+            </div>
+            <div class="processo-steps">
+                <div class="processo-step animate-slide-up">
+                    <div class="step-number animate-rotate">1</div>
+                    <div class="step-content">
+                        <h3>Conversamos sobre o que você precisa</h3>
+                        <p>Primeiro, entendo seu problema ou objetivo. Sem pressa, sem pressão.</p>
+                    </div>
+                </div>
+                <div class="processo-step animate-slide-up">
+                    <div class="step-number animate-rotate">2</div>
+                    <div class="step-content">
+                        <h3>Proponho soluções que fazem sentido</h3>
+                        <p>Apresento opções claras, com custos transparentes e prazos realistas.</p>
+                    </div>
+                </div>
+                <div class="processo-step animate-slide-up">
+                    <div class="step-number animate-rotate">3</div>
+                    <div class="step-content">
+                        <h3>Executo o trabalho com qualidade</h3>
+                        <p>Mãos à obra! Trabalho com dedicação para entregar o melhor resultado.</p>
+                    </div>
+                </div>
+                <div class="processo-step animate-slide-up">
+                    <div class="step-number animate-rotate">4</div>
+                    <div class="step-content">
+                        <h3>Acompanho os resultados</h3>
+                        <p>Não sumo depois que o trabalho está pronto. Estou aqui para o que precisar!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+<section id="projetos" class="projetos">
+    <div class="container">
+        <div class="section-header">
+            <span class="tag">Meu portfólio</span>
+            <h2>Projetos que desenvolvi</h2>
+            <p>Conheça alguns dos trabalhos que criei para clientes e projetos pessoais</p>
+        </div>
+        
+        <!-- Navegação do Portfólio -->
+        <div class="portfolio-nav">
+            <button class="portfolio-tab active" data-tab="clientes">
+                <i class="fas fa-briefcase"></i>
+                Projetos para Clientes
+            </button>
+            <button class="portfolio-tab" data-tab="pessoais">
+                <i class="fas fa-code"></i>
+                Projetos Pessoais
+            </button>
+        </div>
+
+        <!-- Projetos para Clientes -->
+        <div class="portfolio-content active" id="clientes">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carousel-clientes">
+                        <div class="projeto-slide active animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Restaurante Sabor & Arte" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Site Institucional</span>
+                                    <h3>Flora Cerri</h3>
+                                    <p>Site completo com cardápio digital, sistema de reservas online e integração com principais plataformas de delivery. Aumento de 40% nas reservas online.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <a href="https://restaurante-sabor-arte.com" target="_blank" class="btn btn-primary">Ver site ao vivo</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Loja Moda & Estilo" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Landing Page</span>
+                                    <h3>Loja Polo Sul</h3>
+                                    <p>Landing Page profissional integrado com vitrine composta com mais de 20 produtos com direcionamento para o whatsapp com mensagem automatica, redes sociais e Loja Virtual.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <a href="./sites/site polo sul/index.html" target="_blank" class="btn btn-primary">Ver site ao vivo</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Clínica Dr. Silva" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Site Institucional</span>
+                                    <h3>Garden Cerri</h3>
+                                    <p>Página institucional profissional com ramificações para cada nicho da empresa, integrado com formulário de contato, whatsapp, redes sociais e Loja Virtual.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <a href="./sites/garden cerri site/index.html" target="_blank" class="btn btn-primary">Ver site ao vivo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" data-carousel="clientes">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="dots-clientes">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="carousel-btn next" data-carousel="clientes">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projetos Pessoais -->
+        <div class="portfolio-content" id="pessoais">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carousel-pessoais">
+                        <div class="projeto-slide active animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Task Manager Pro" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Web App</span>
+                                    <h3>Task Manager Pro</h3>
+                                    <p>Aplicação completa de gerenciamento de tarefas com autenticação, drag & drop, notificações em tempo real e sincronização em nuvem.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/pagina advocacia/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Weather Dashboard" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Dashboard</span>
+                                    <h3>Weather Dashboard</h3>
+                                    <p>Dashboard interativo de clima com previsões detalhadas, mapas, gráficos e alertas meteorológicos. Interface moderna e responsiva.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/pagina de fotografo/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Portfolio Generator" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">E-commerce</span>
+                                    <h3>Loja de Suplementos</h3>
+                                    <p>Loja Online integrada com carrinho, cupons de descontos, mais de 50 produtos, aba de contatos, finalizar pedido e metodo de filtragem por pesquisa ou filtros pre-definidos.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/mnsuplementos/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="E-commerce Platform" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Landing Page</span>
+                                    <h3>Site para Personal Trainer</h3>
+                                    <p>Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento, gestão de estoque e painel administrativo.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/pagina para personal/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Social Media Dashboard" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">Dashboard</span>
+                                    <h3>Social Media Dashboard</h3>
+                                    <p>Dashboard para gerenciamento de redes sociais com métricas em tempo real, agendamento de posts e análise de engajamento.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/studio de tatuagem/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="AI Chat Assistant" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">AI App</span>
+                                    <h3>AI Chat Assistant</h3>
+                                    <p>Assistente virtual com IA para atendimento ao cliente, integração com WhatsApp e análise de sentimentos em tempo real.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/verde-vida-produtos-naturais/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projeto-slide animate-scale">
+                            <div class="projeto-item animate-scale">
+                                <div class="projeto-img">
+                                    <img src="/placeholder.svg?height=300&width=500" alt="Code Learning Platform" class="interactive">
+                                </div>
+                                <div class="projeto-info">
+                                    <span class="projeto-categoria">SPA – Single Page Application</span>
+                                    <h3>Code Learning Platform</h3>
+                                    <p>Plataforma de aprendizado de programação com exercícios interativos, desafios práticos e sistema de gamificação para engajamento.</p>
+                                    <div class="projeto-tech">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                    <div class="projeto-links">
+                                        <a href="./sites/financial-dashboard/index.html" target="_blank" class="btn btn-primary">Ver Demo</a>
+                                        <a href="https://github.com/joaocerri/sites" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" data-carousel="pessoais">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="dots-pessoais">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                        <span class="dot" data-slide="4"></span>
+                        <span class="dot" data-slide="5"></span>
+                        <span class="dot" data-slide="6"></span>
+                    </div>
+                    <button class="carousel-btn next" data-carousel="pessoais">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Perguntas frequentes</span>
+                <h2>Dúvidas comuns</h2>
+                <p>Tudo o que você precisa saber antes de me contratar</p>
+            </div>
+            <div class="faq-container">
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>Quanto tempo leva para desenvolver meu site ou landing page?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>O prazo varia de acordo com a complexidade do projeto. Em geral, uma landing page pode ser entregue em até 7 dias úteis, enquanto sites institucionais podem levar entre 10 e 20 dias úteis. Durante o primeiro contato, já passo uma estimativa mais precisa com base nas suas necessidades.</p>
+        </div>
+    </div>
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>Preciso ter algum conhecimento técnico para contratar ou usar o site?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>De jeito nenhum! Todo o processo é pensado para ser simples e prático. Você me passa as informações essenciais e eu cuido de toda a parte técnica. No final, entrego um site pronto para uso e, se quiser, ofereço um vídeo ou guia mostrando como fazer alterações básicas.</p>
+        </div>
+    </div>
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>O que está incluso no valor do projeto?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>O valor inclui: design personalizado, site responsivo (adaptado para celular), otimização básica para SEO, formulário de contato, integração com redes sociais e suporte pós-entrega por 7 dias. Outros itens, como integração com sistemas externos ou textos profissionais, podem ser combinados à parte.</p>
+        </div>
+    </div>
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>Você também cuida da hospedagem e do domínio?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>Posso orientar totalmente na escolha e configuração de domínio e hospedagem. Se preferir, posso fazer tudo por você, utilizando um serviço confiável (com custo separado). O site será entregue 100% funcional, pronto para ficar no ar.</p>
+        </div>
+    </div>
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>Como funciona o pagamento?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>O pagamento pode ser feito via Pix ou transferência bancária. Geralmente, cobro 50% no início do projeto e 50% na entrega. Em alguns casos, podemos negociar outras formas ou parcelamento via plataformas seguras.</p>
+        </div>
+    </div>
+    <div class="faq-item animate-slide-up">
+        <div class="faq-question interactive">
+            <h3>E se eu quiser fazer mudanças depois que o site estiver pronto?</h3>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+            <p>Incluo uma revisão gratuita após a entrega, para ajustes finais. Se você quiser mudanças maiores ou recorrentes, posso oferecer pacotes de manutenção mensal ou cobranças avulsas por serviço. Tudo é feito com transparência e agilidade.</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Vamos conversar</span>
+                <h2>Entre em contato</h2>
+                <p>Escolha o canal que preferir para falar comigo</p>
+            </div>
+            <div class="contato-grid">
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Resposta rápida e direta</p>
+        <a href="https://wa.me/5519999312628?text=Oi,%20João!%20Tenho%20interesse%20em%20desenvolver%20um%20projeto%20de%20site%20com%20você." target="_blank" class="btn btn-primary">
+            <i class="fab fa-whatsapp"></i>
+            Chamar no WhatsApp
+        </a>
+    </div>
+    
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <h3>E-mail</h3>
+        <p>Para conversas mais detalhadas</p>
+        <a href="mailto:contato.joaocerri@gmail.com?subject=Interesse em projeto de site&body=Olá João,%0D%0A%0D%0ATenho interesse em desenvolver um site. Gostaria de conversar sobre:" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Enviar E-mail
+        </a>
+    </div>
+    
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <h3>Instagram</h3>
+        <p>Veja meu trabalho e mande DM</p>
+        <a href="https://instagram.com/cerri.dev" target="_blank" class="btn btn-primary">
+            <i class="fab fa-instagram"></i>
+            Seguir no Instagram
+        </a>
+    </div>
+    
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <h3>LinkedIn</h3>
+        <p>Conecte-se profissionalmente</p>
+        <a href="https://linkedin.com/in/joaocerri" target="_blank" class="btn btn-primary">
+            <i class="fab fa-linkedin"></i>
+            Conectar no LinkedIn
+        </a>
+    </div>
+    
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fab fa-github"></i>
+        </div>
+        <h3>GitHub</h3>
+        <p>Veja meus códigos e projetos</p>
+        <a href="https://github.com/joaocerri" target="_blank" class="btn btn-primary">
+            <i class="fab fa-github"></i>
+            Ver no GitHub
+        </a>
+    </div>
+    
+    <div class="contato-card animate-scale">
+        <div class="contato-icon animate-float">
+            <i class="fab fa-tiktok"></i>
+        </div>
+        <h3>TikTok</h3>
+        <p>Dicas rápidas de desenvolvimento</p>
+        <a href="https://tiktok.com/@cerri.dev" target="_blank" class="btn btn-primary">
+            <i class="fab fa-tiktok"></i>
+            Seguir no TikTok
+        </a>
+    </div>
+</div>
+        </div>
+        <div class="bg-wave"></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para ter um site que realmente vende?</h2>
+                <p>Vamos trabalhar juntos para criar a solução ideal para o seu negócio.</p>
+                <a href="https://wa.me/5519999312628?text=Oi,%20João!%20Quero%20conversar%20sobre%20um%20projeto%20de%20site." target="_blank" class="btn btn-light">Fale comigo agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Quem sou</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Portfólio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#servicos">Sites Institucionais</a></li>
+                        <li><a href="#servicos">Landing Pages</a></li>
+                        <li><a href="#servicos">Manutenção de Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contato.joaocerri@gmail.com</li>
+                        <li><i class="fab fa-whatsapp"></i> (19) 99931-2628</li>
+                        <li><i class="fab fa-instagram"></i> @cerri.dev</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 João Antonio Gobato Cerri. Todos os direitos reservados.</p>
+                <p class="footer-credits"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#inicio" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5519999312628" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale comigo</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Custom CSS for animations and additional styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Category carousel styles */
+.category-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.category-slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Category indicators */
+.category-indicator {
+  transition: all 0.3s ease;
+}
+
+.category-indicator.active {
+  transform: scale(1.25);
+}
+
+/* Product card styles */
+.product-card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.product-card .product-image {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-card .product-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.product-card:hover .product-image::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Product indicators */
+.product-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.product-indicator.active {
+  background-color: #000;
+  transform: scale(1.25);
+}
+
+.product-indicator:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar hide/show animation */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* Mobile menu animation */
+.mobile-menu-hidden {
+  display: none;
+}
+
+/* Button hover effects */
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-showcase .product-prev,
+  .product-showcase .product-next {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Loading animation for images */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

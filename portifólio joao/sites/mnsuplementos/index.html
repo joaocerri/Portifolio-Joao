@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Suplementos - Sua Loja de Suplementos Online</title>
+    <meta name="description" content="MN Suplementos - Os melhores suplementos para seu treino. Whey, Creatina, Pré-treinos e muito mais!">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MN <span>SUPLEMENTOS</span></h1>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="categorias.html" class="nav-link">Categorias</a></li>
+                        <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>TRANSFORME SEU <span>TREINO</span></h2>
+                    <p>Os melhores suplementos para potencializar seus resultados</p>
+                    <button class="cta-button" onclick="window.location.href='produtos.html'">
+                        COMPRAR AGORA
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Suplementos MN" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">PRODUTOS EM DESTAQUE</h2>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Featured products will be loaded here -->
+                </div>
+                <div class="view-all-container">
+                    <a href="produtos.html" class="view-all-btn">Ver Todos os Produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">POR QUE ESCOLHER A MN SUPLEMENTOS?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Entregamos em todo o Brasil com agilidade e segurança</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Qualidade Premium</h3>
+                        <p>Produtos de alta qualidade das melhores marcas</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Suporte Especializado</h3>
+                        <p>Atendimento personalizado com especialistas</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Compra Segura</h3>
+                        <p>Pagamento 100% seguro e protegido</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            
+            <!-- Coupon Section -->
+            <div class="coupon-section">
+                <div class="coupon-input-container">
+                    <input type="text" id="couponInput" placeholder="Digite seu cupom de desconto" class="coupon-input">
+                    <button class="apply-coupon-btn" id="applyCouponBtn">
+                        <i class="fas fa-tag"></i>
+                        Aplicar
+                    </button>
+                </div>
+                <div class="coupon-message" id="couponMessage"></div>
+                <div class="applied-coupon" id="appliedCoupon" style="display: none;">
+                    <span class="coupon-info">
+                        <i class="fas fa-tag"></i>
+                        <span id="appliedCouponCode"></span> - <span id="appliedCouponDiscount"></span>% OFF
+                    </span>
+                    <button class="remove-coupon" id="removeCouponBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span>R$ <span id="cartSubtotal">0,00</span></span>
+                    </div>
+                    <div class="summary-line discount-line" id="discountLine" style="display: none;">
+                        <span>Desconto:</span>
+                        <span class="discount-amount">- R$ <span id="discountAmount">0,00</span></span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+                    </div>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-credit-card"></i>
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MN SUPLEMENTOS</h3>
+                    <p>Sua loja de confiança para suplementos de qualidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@mnsuplementos.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Pagamento & Entrega</h4>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-pix"></i>
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <p>Entrega para todo o Brasil</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MN Suplementos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span>Produto adicionado ao carrinho!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

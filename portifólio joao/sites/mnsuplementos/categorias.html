@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - MN Suplementos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MN <span>SUPLEMENTOS</span></h1>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="categorias.html" class="nav-link active">Categorias</a></li>
+                        <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>NOSSAS CATEGORIAS</h1>
+                <p>Encontre os melhores suplementos organizados por categoria</p>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-detailed">
+            <div class="container">
+                <div class="categories-grid-detailed">
+                    <div class="category-detailed" data-category="whey">
+                        <div class="category-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Whey Protein">
+                        </div>
+                        <div class="category-content">
+                            <div class="category-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <h2>Whey Protein</h2>
+                            <p>Proteínas de alta qualidade para ganho de massa muscular. Whey concentrado, isolado e hidrolisado das melhores marcas.</p>
+                            <ul class="category-benefits">
+                                <li><i class="fas fa-check"></i> Ganho de massa muscular</li>
+                                <li><i class="fas fa-check"></i> Recuperação pós-treino</li>
+                                <li><i class="fas fa-check"></i> Alto valor biológico</li>
+                            </ul>
+                            <a href="produtos.html?categoria=whey" class="category-btn">Ver Produtos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-detailed" data-category="creatina">
+                        <div class="category-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Creatina">
+                        </div>
+                        <div class="category-content">
+                            <div class="category-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h2>Creatina</h2>
+                            <p>Aumente sua força, potência e resistência muscular com creatina monohidratada e outras formas avançadas.</p>
+                            <ul class="category-benefits">
+                                <li><i class="fas fa-check"></i> Aumento de força</li>
+                                <li><i class="fas fa-check"></i> Maior resistência</li>
+                                <li><i class="fas fa-check"></i> Recuperação rápida</li>
+                            </ul>
+                            <a href="produtos.html?categoria=creatina" class="category-btn">Ver Produtos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-detailed" data-category="pre-treino">
+                        <div class="category-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Pré-Treino">
+                        </div>
+                        <div class="category-content">
+                            <div class="category-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h2>Pré-Treino</h2>
+                            <p>Energia, foco e disposição para treinos intensos. Fórmulas com cafeína, beta-alanina e outros ingredientes ativos.</p>
+                            <ul class="category-benefits">
+                                <li><i class="fas fa-check"></i> Energia e disposição</li>
+                                <li><i class="fas fa-check"></i> Foco mental</li>
+                                <li><i class="fas fa-check"></i> Vasodilatação</li>
+                            </ul>
+                            <a href="produtos.html?categoria=pre-treino" class="category-btn">Ver Produtos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-detailed" data-category="vitaminas">
+                        <div class="category-image">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Vitaminas">
+                        </div>
+                        <div class="category-content">
+                            <div class="category-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h2>Vitaminas</h2>
+                            <p>Complexos vitamínicos e minerais para saúde geral, imunidade e bem-estar. Suporte nutricional completo.</p>
+                            <ul class="category-benefits">
+                                <li><i class="fas fa-check"></i> Fortalece imunidade</li>
+                                <li><i class="fas fa-check"></i> Melhora disposição</li>
+                                <li><i class="fas fa-check"></i> Saúde geral</li>
+                            </ul>
+                            <a href="produtos.html?categoria=vitaminas" class="category-btn">Ver Produtos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            
+            <!-- Coupon Section -->
+            <div class="coupon-section">
+                <div class="coupon-input-container">
+                    <input type="text" id="couponInput" placeholder="Digite seu cupom de desconto" class="coupon-input">
+                    <button class="apply-coupon-btn" id="applyCouponBtn">
+                        <i class="fas fa-tag"></i>
+                        Aplicar
+                    </button>
+                </div>
+                <div class="coupon-message" id="couponMessage"></div>
+                <div class="applied-coupon" id="appliedCoupon" style="display: none;">
+                    <span class="coupon-info">
+                        <i class="fas fa-tag"></i>
+                        <span id="appliedCouponCode"></span> - <span id="appliedCouponDiscount"></span>% OFF
+                    </span>
+                    <button class="remove-coupon" id="removeCouponBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span>R$ <span id="cartSubtotal">0,00</span></span>
+                    </div>
+                    <div class="summary-line discount-line" id="discountLine" style="display: none;">
+                        <span>Desconto:</span>
+                        <span class="discount-amount">- R$ <span id="discountAmount">0,00</span></span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+                    </div>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-credit-card"></i>
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MN SUPLEMENTOS</h3>
+                    <p>Sua loja de confiança para suplementos de qualidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@mnsuplementos.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Pagamento & Entrega</h4>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-pix"></i>
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <p>Entrega para todo o Brasil</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MN Suplementos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span>Produto adicionado ao carrinho!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
