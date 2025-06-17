@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Sabor - Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página Inicial -->
+    <div id="home-page" class="page active">
+        <header class="hero-header">
+            <div class="container">
+                <h1 class="logo">🍽️ Cantinho do Sabor</h1>
+                <p class="tagline">Sabores únicos que conquistam o coração</p>
+            </div>
+        </header>
+
+        <main class="hero-main">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Bem-vindos ao nosso restaurante!</h2>
+                    <p class="hero-description">
+                        Descubra uma experiência gastronômica única com pratos preparados 
+                        com ingredientes frescos e muito amor. Nosso cardápio oferece 
+                        opções deliciosas para todos os gostos.
+                    </p>
+                    <button class="cta-button" onclick="showMenu()">
+                        Ver Cardápio
+                        <span class="button-icon">🍴</span>
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/principal.png" alt="Pratos deliciosos" class="hero-img">
+                </div>
+            </div>
+        </main>
+
+        <!-- Adicionar esta seção antes do <footer class="home-footer"> -->
+        <section class="social-location-section">
+            <div class="container">
+                <div class="social-location-container">
+                    <!-- Seção de Redes Sociais -->
+                    <div class="social-section">
+                        <h3>Siga-nos nas Redes Sociais</h3>
+                        <div class="social-links">
+                            <a href="https://instagram.com/cantinhodosabor" target="_blank" class="social-link" title="Instagram">
+                                📷
+                            </a>
+                            <a href="https://facebook.com/cantinhodosabor" target="_blank" class="social-link" title="Facebook">
+                                📘
+                            </a>
+                            <a href="https://wa.me/5511999999999" target="_blank" class="social-link" title="WhatsApp">
+                                💬
+                            </a>
+                            <a href="tel:+5511999999999" class="social-link" title="Telefone">
+                                📞
+                            </a>
+                        </div>
+                        <div class="contact-info">
+                            <p><strong>📍 Endereço:</strong></p>
+                            <p>Rua das Delícias, 123</p>
+                            <p>Centro - São Paulo/SP</p>
+                            <p>CEP: 01234-567</p>
+                            <br>
+                            <p><strong>📞 Contato:</strong></p>
+                            <p>(11) 99999-9999</p>
+                            <p>contato@cantinhodosabor.com.br</p>
+                            <br>
+                            <p><strong>🕒 Horário de Funcionamento:</strong></p>
+                            <p>Segunda a Domingo: 11h às 23h</p>
+                        </div>
+                    </div>
+
+                    <!-- Seção de Localização -->
+                    <div class="location-section">
+                        <h3>Nossa Localização</h3>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59541c6c79c3%3A0x36b90a85f0f8cb33!2sPra%C3%A7a da S%C3%A9%2C S%C3%A3o Paulo - SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Localização do Cantinho do Sabor">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="home-footer">
+            <div class="container">
+                <p>&copy; 2024 Cantinho do Sabor. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Página do Cardápio -->
+    <div id="menu-page" class="page">
+        <header class="menu-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="logo">🍽️ Cantinho do Sabor</h1>
+                    <button class="back-button" onclick="showHome()">
+                        ← Voltar ao Início
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="menu-main">
+            <div class="container">
+                <div class="menu-controls">
+                    <h2 class="menu-title">Nosso Cardápio</h2>
+                    
+                    <!-- Campo de Busca -->
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Buscar pratos..." class="search-input">
+                        <span class="search-icon">🔍</span>
+                    </div>
+
+                    <!-- Filtros por Categoria -->
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="todos">Todos</button>
+                        <button class="filter-btn" data-category="principais">Pratos Principais</button>
+                        <button class="filter-btn" data-category="sobremesas">Sobremesas</button>
+                        <button class="filter-btn" data-category="bebidas">Bebidas</button>
+                    </div>
+                </div>
+
+                <!-- Grid de Pratos -->
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Os pratos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="success-icon">✅</div>
+                <h3>Adicionado ao Pedido!</h3>
+                <p id="modal-message"></p>
+                <button class="modal-button" onclick="closeModal()">Continuar Navegando</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Todas as imagens do cardápio serão carregadas em 500x500 via JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
