@@ -98,7 +98,7 @@ const products = [
     name: "ZMA",
     description: "Zinco, Magnésio e Vitamina B6 para recuperação",
     price: 39.9,
-    image: "assets/zma.png",
+    image: "assets/ZMA.png",
     category: "vitaminas",
   },
   {
