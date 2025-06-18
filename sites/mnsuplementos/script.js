@@ -32,7 +32,7 @@ const products = [
     name: "Multivitamínico Premium",
     description: "Complexo vitamínico completo",
     price: 39.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Multivitamínico Premium.png",
     category: "vitaminas",
   },
   {
@@ -40,7 +40,7 @@ const products = [
     name: "Whey Isolado",
     description: "Proteína isolada de absorção rápida",
     price: 129.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/whey isolado.png",
     category: "whey",
     badge: "Premium",
   },
@@ -49,7 +49,7 @@ const products = [
     name: "Creatina HCL",
     description: "Creatina de alta solubilidade",
     price: 59.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Creatina HCL.png",
     category: "creatina",
   },
   {
@@ -57,7 +57,7 @@ const products = [
     name: "Pré-Treino Natural",
     description: "Fórmula natural sem estimulantes",
     price: 54.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Pre Treino Natural.png",
     category: "pre-treino",
   },
   {
@@ -65,7 +65,7 @@ const products = [
     name: "Vitamina D3",
     description: "Fortalece ossos e sistema imunológico",
     price: 29.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Vitamina D3.png",
     category: "vitaminas",
     badge: "Essencial",
   },
@@ -74,7 +74,7 @@ const products = [
     name: "BCAA 2:1:1",
     description: "Aminoácidos essenciais para recuperação muscular",
     price: 49.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/BCAA.png",
     category: "aminoacidos",
   },
   {
@@ -82,7 +82,7 @@ const products = [
     name: "Glutamina",
     description: "Suporte para sistema imunológico e recuperação",
     price: 34.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Glutamina.png",
     category: "aminoacidos",
   },
   {
@@ -90,7 +90,7 @@ const products = [
     name: "Ômega 3",
     description: "Ácidos graxos essenciais para saúde cardiovascular",
     price: 44.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Omega 3.png",
     category: "vitaminas",
   },
   {
@@ -98,7 +98,7 @@ const products = [
     name: "ZMA",
     description: "Zinco, Magnésio e Vitamina B6 para recuperação",
     price: 39.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/zma.png",
     category: "vitaminas",
   },
   {
@@ -106,7 +106,7 @@ const products = [
     name: "Termogênico",
     description: "Acelera metabolismo e queima de gordura",
     price: 59.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Termogenico.png",
     category: "termogenicos",
   },
   {
@@ -114,7 +114,7 @@ const products = [
     name: "L-Carnitina",
     description: "Transporta gordura para produção de energia",
     price: 49.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/L-Carnitina.png",
     category: "termogenicos",
   },
   {
@@ -122,7 +122,7 @@ const products = [
     name: "Albumina",
     description: "Proteína de ovo para ganho de massa",
     price: 29.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Albumina.png",
     category: "proteinas",
   },
   {
@@ -130,7 +130,7 @@ const products = [
     name: "Caseína",
     description: "Proteína de absorção lenta para recuperação noturna",
     price: 79.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Caseína.png",
     category: "proteinas",
   },
   {
@@ -138,7 +138,7 @@ const products = [
     name: "Beta-Alanina",
     description: "Aumenta resistência muscular",
     price: 39.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Beta-Alanina.png",
     category: "aminoacidos",
   },
   {
@@ -146,7 +146,7 @@ const products = [
     name: "Taurina",
     description: "Aminoácido para performance e recuperação",
     price: 24.9,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "assets/Taurina.png",
     category: "aminoacidos",
   },
   {
