@@ -6,15 +6,35 @@
 }
 
 :root {
-  --primary-color: #d90429;
-  --secondary-color: #b3001b;
-  --dark-bg: #121212;
-  --light-text: #f5f5f5;
-  --gray-text: #aaa;
-  --card-bg: #1a1a1a;
-  --border-color: #d90429;
-  --overlay-color: rgba(217, 4, 41, 0.7);
+  /* Cores principais - Tema profissional de tatuagem */
+  --primary-color: #1a1a1a;           /* Preto profundo */
+  --secondary-color: #d4af37;         /* Dourado elegante */
+  --accent-color: #8b0000;            /* Vermelho escuro */
+  
+  /* Cores de fundo */
+  --bg-primary: #ffffff;              /* Branco puro */
+  --bg-secondary: #f8f9fa;            /* Cinza muito claro */
+  --bg-dark: #1a1a1a;                 /* Preto profundo */
+  --bg-card: #ffffff;                 /* Branco para cards */
+  
+  /* Cores de texto */
+  --text-primary: #1a1a1a;            /* Preto para texto principal */
+  --text-secondary: #6c757d;          /* Cinza médio para texto secundário */
+  --text-light: #ffffff;              /* Branco para texto em fundo escuro */
+  --text-muted: #868e96;              /* Cinza claro para texto muted */
+  
+  /* Cores de borda e separadores */
+  --border-color: #e9ecef;            /* Cinza claro para bordas */
+  --border-accent: #d4af37;           /* Dourado para bordas de destaque */
+  
+  /* Cores de overlay e sombras */
+  --overlay-color: rgba(26, 26, 26, 0.8);  /* Overlay escuro */
+  --shadow-color: rgba(0, 0, 0, 0.1);      /* Sombra sutil */
+  --shadow-dark: rgba(0, 0, 0, 0.3);       /* Sombra mais escura */
+  
+  /* Transições */
   --transition: all 0.3s ease;
+  --transition-fast: all 0.2s ease;
 }
 
 html {
@@ -24,8 +44,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--light-text);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
@@ -52,11 +72,11 @@ body {
 }
 
 .section-header h2 span {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .section-header p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -78,24 +98,24 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
 }
 
 .btn-primary:hover {
-  background-color: #b3001b;
-  box-shadow: 0 10px 20px rgba(217, 4, 41, 0.2);
+  background-color: var(--primary-color);
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
 }
 
 /* Seções */
@@ -109,16 +129,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(18, 18, 18, 0.9);
+  background-color: var(--bg-primary);
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: var(--transition);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 header.scrolled {
-  background-color: rgba(18, 18, 18, 0.95);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 15px var(--shadow-dark);
 }
 
 header .container {
@@ -135,6 +155,9 @@ header .container {
 
 .logo img {
   height: 50px;
+  width: auto;
+  object-fit: contain;
+  max-width: 200px;
 }
 
 nav .menu {
@@ -147,7 +170,7 @@ nav .menu li {
 }
 
 nav .menu li a {
-  color: var(--light-text);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -157,7 +180,7 @@ nav .menu li a {
 
 nav .menu li a:hover,
 nav .menu li a.active {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 nav .menu li a::after {
@@ -167,7 +190,7 @@ nav .menu li a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   transition: var(--transition);
 }
 
@@ -193,14 +216,14 @@ nav .menu li a.active::after {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: var(--light-text);
+  background-color: var(--text-primary);
   transition: var(--transition);
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
   height: 100vh;
-  background-image: url("../images/hero-bg.png");
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--bg-dark) 100%);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -235,19 +258,19 @@ nav .menu li a.active::after {
 }
 
 .hero h1 span {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   display: block;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: var(--gray-text);
+  color: var(--text-light);
 }
 
 /* ===== PORTFOLIO SECTION ===== */
 .portfolio {
-  background-color: var(--dark-bg);
+  background-color: var(--bg-primary);
 }
 
 .portfolio-filter {
@@ -260,7 +283,7 @@ nav .menu li a.active::after {
 .filter-btn {
   background: none;
   border: none;
-  color: var(--light-text);
+  color: var(--text-primary);
   font-size: 1rem;
   padding: 8px 20px;
   margin: 0 5px 10px;
@@ -271,8 +294,8 @@ nav .menu li a.active::after {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: var(--primary-color);
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--text-light);
 }
 
 .portfolio-grid {
@@ -286,13 +309,15 @@ nav .menu li a.active::after {
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
-  height: 300px;
+  height: 350px;
+  aspect-ratio: 1;
 }
 
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: var(--transition);
 }
 
@@ -306,7 +331,7 @@ nav .menu li a.active::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--primary-color) 60%, rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 60%, rgba(26, 26, 26, 0.9) 100%);
   opacity: 0;
   transition: var(--transition);
   display: flex;
@@ -319,18 +344,20 @@ nav .menu li a.active::after {
 }
 
 .portfolio-item .overlay h3 {
-  color: white;
+  color: var(--text-light);
   margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .portfolio-item .overlay p {
-  color: var(--gray-text);
+  color: var(--text-light);
   font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 /* ===== ESTILOS SECTION ===== */
 .styles {
-  background-color: #0a0a0a;
+  background-color: var(--bg-secondary);
 }
 
 .styles-grid {
@@ -340,39 +367,41 @@ nav .menu li a.active::after {
 }
 
 .style-card {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   border-radius: 10px;
   padding: 30px;
   text-align: center;
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .style-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  border-color: var(--primary-color);
+  box-shadow: 0 15px 30px var(--shadow-dark);
+  border-color: var(--secondary-color);
 }
 
 .style-icon {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-bottom: 20px;
 }
 
 .style-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
+  color: var(--text-primary);
 }
 
 .style-card p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
 /* ===== ARTISTS SECTION ===== */
 .artists {
-  background-color: var(--dark-bg);
+  background-color: var(--bg-primary);
 }
 
 .artists-grid {
@@ -382,27 +411,31 @@ nav .menu li a.active::after {
 }
 
 .artist-card {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   border-radius: 10px;
   overflow: hidden;
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .artist-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px var(--shadow-dark);
+  border-color: var(--secondary-color);
 }
 
 .artist-img {
-  height: 300px;
+  height: 400px;
   overflow: hidden;
+  position: relative;
 }
 
 .artist-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: var(--transition);
 }
 
@@ -417,23 +450,24 @@ nav .menu li a.active::after {
 .artist-info h3 {
   font-size: 1.5rem;
   margin-bottom: 5px;
+  color: var(--text-primary);
 }
 
 .artist-info .specialty {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: 500;
   margin-bottom: 15px;
 }
 
 .artist-info .bio {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   margin-bottom: 20px;
   font-size: 0.95rem;
 }
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-  background-color: #0a0a0a;
+  background-color: var(--bg-secondary);
 }
 
 .contact-wrapper {
@@ -443,10 +477,11 @@ nav .menu li a.active::after {
 }
 
 .contact-form {
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   padding: 40px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .form-group {
@@ -457,6 +492,7 @@ nav .menu li a.active::after {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
+  color: var(--text-primary);
 }
 
 .form-group input,
@@ -464,10 +500,10 @@ nav .menu li a.active::after {
 .form-group textarea {
   width: 100%;
   padding: 12px 15px;
-  background-color: #222;
+  background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  color: var(--light-text);
+  color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   transition: var(--transition);
@@ -477,8 +513,8 @@ nav .menu li a.active::after {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 
 .contact-info {
@@ -495,7 +531,7 @@ nav .menu li a.active::after {
 
 .info-item i {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-right: 20px;
   margin-top: 5px;
 }
@@ -503,15 +539,16 @@ nav .menu li a.active::after {
 .info-item h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
+  color: var(--text-primary);
 }
 
 .info-item p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: #0a0a0a;
+  background-color: var(--bg-dark);
   border-top: 1px solid var(--border-color);
   padding-top: 70px;
 }
@@ -524,14 +561,15 @@ footer {
 }
 
 .footer-logo img {
-  height: 50px;
+  height: 60px;
+  width: auto;
   margin-bottom: 15px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
+  object-fit: contain;
+  max-width: 200px;
 }
 
 .footer-logo p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -542,6 +580,7 @@ footer {
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
+  color: var(--text-light);
 }
 
 .footer-social h4::after,
@@ -553,7 +592,7 @@ footer {
   left: 0;
   width: 50px;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .social-icons {
@@ -567,27 +606,27 @@ footer {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #222;
-  color: var(--light-text);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-radius: 50%;
   transition: var(--transition);
   font-size: 1.2rem;
 }
 
 .social-icons a:hover {
-  background: var(--primary-color);
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--text-light);
 }
 
 .footer-hours p,
 .footer-contact p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
 
 .footer-contact i {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-right: 10px;
 }
 
@@ -598,7 +637,7 @@ footer {
 }
 
 .footer-bottom p {
-  color: var(--gray-text);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -617,13 +656,14 @@ footer {
 
 .modal-content {
   position: relative;
-  background-color: var(--card-bg);
+  background-color: var(--bg-card);
   margin: 50px auto;
   padding: 30px;
   width: 80%;
   max-width: 800px;
   border-radius: 10px;
   animation: modalFadeIn 0.3s;
+  box-shadow: 0 10px 30px var(--shadow-dark);
 }
 
 @keyframes modalFadeIn {
@@ -642,22 +682,120 @@ footer {
   top: 15px;
   right: 20px;
   font-size: 2rem;
-  color: var(--gray-text);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: var(--transition);
 }
 
 .close-modal:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 #portfolio-modal .modal-content {
   padding: 10px;
+  max-width: 90%;
 }
 
 #portfolio-modal img {
   width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
   border-radius: 5px;
+}
+
+/* ===== MODAL DOS ARTISTAS ===== */
+.artist-modal-content {
+  max-width: 100%;
+}
+
+.artist-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.artist-modal-header img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.artist-modal-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.artist-modal-info .specialty {
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.artist-modal-info .instagram {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.artist-modal-info .instagram i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+.artist-modal-bio {
+  margin-bottom: 30px;
+}
+
+.artist-modal-bio h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.artist-modal-bio p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.artist-modal-portfolio h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.artist-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.artist-portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 150px;
+}
+
+.artist-portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transition);
+}
+
+.artist-portfolio-item:hover img {
+  transform: scale(1.05);
 }
 
 /* ===== BACK TO TOP BUTTON ===== */
@@ -667,8 +805,8 @@ footer {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: var(--primary-color);
-  color: white;
+  background: var(--secondary-color);
+  color: var(--text-light);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -680,6 +818,7 @@ footer {
   visibility: hidden;
   transition: var(--transition);
   z-index: 999;
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 #back-to-top.visible {
@@ -688,8 +827,9 @@ footer {
 }
 
 #back-to-top:hover {
-  background-color: #b3001b;
+  background-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-dark);
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -704,6 +844,14 @@ footer {
 
   .contact-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-item {
+    height: 300px;
+  }
+
+  .artist-img {
+    height: 350px;
   }
 }
 
@@ -724,17 +872,66 @@ footer {
     font-size: 1.1rem;
   }
 
+  .logo img {
+    height: 40px;
+    max-width: 150px;
+  }
+
+  .footer-logo img {
+    height: 50px;
+    max-width: 150px;
+  }
+
+  .site-logo {
+    max-width: 200px;
+  }
+
+  .portfolio-item {
+    height: 280px;
+  }
+
+  .artist-img {
+    height: 320px;
+  }
+
+  /* Modal dos artistas responsivo */
+  .artist-modal-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .artist-modal-header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .artist-modal-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .artist-portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .artist-portfolio-item {
+    height: 120px;
+  }
+
   nav .menu {
     position: fixed;
     top: 80px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: rgba(18, 18, 18, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    backdrop-filter: blur(10px);
   }
 
   nav .menu.active {
@@ -743,6 +940,11 @@ footer {
 
   nav .menu li {
     margin: 15px 0;
+  }
+
+  nav .menu li a {
+    color: var(--text-primary);
+    font-size: 1.2rem;
   }
 
   .menu-mobile {
@@ -775,10 +977,55 @@ footer {
     font-size: 1rem;
   }
 
+  .logo img {
+    height: 35px;
+    max-width: 120px;
+  }
+
+  .footer-logo img {
+    height: 45px;
+    max-width: 120px;
+  }
+
+  .site-logo {
+    max-width: 180px;
+  }
+
   .portfolio-grid,
   .styles-grid,
   .artists-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-item {
+    height: 250px;
+  }
+
+  .artist-img {
+    height: 280px;
+  }
+
+  /* Modal dos artistas responsivo para mobile pequeno */
+  .artist-modal-header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .artist-modal-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .artist-modal-info .specialty {
+    font-size: 1rem;
+  }
+
+  .artist-portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .artist-portfolio-item {
+    height: 100px;
   }
 
   .modal-content {
@@ -801,8 +1048,9 @@ footer {
 }
 
 .site-logo {
-  max-width: 220px;
+  max-width: 250px;
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
