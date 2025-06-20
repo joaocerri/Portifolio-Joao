@@ -12,7 +12,6 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <!-- Substituir a div do logo por um link -->
                 <div class="nav-logo">
                     <a href="index.html">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_-twTPHhUyzsUTfggS988HTh0g15Obdf.png" alt="Garden Cerri" class="logo">
@@ -60,7 +59,15 @@
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">Entre em Contato</h1>
-            <p class="page-subtitle">Estamos aqui para ajudar você a criar o jardim dos seus sonhos. Entre em contato conosco e descubra como podemos transformar seu espaço.</p>
+            <p class="page-subtitle">Estamos aqui para ajudar você a criar o jardim dos seus sonhos. Entre em contato conosco e descubra como podemos transformar seu espaço com nossa expertise e dedicação.</p>
+        </div>
+    </section>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h2>Vamos Conversar?</h2>
+            <p>Nossa equipe está sempre pronta para atender você com carinho e profissionalismo. Seja para tirar dúvidas, solicitar orçamentos ou agendar uma visita, estamos aqui para ajudar a transformar seus sonhos em realidade.</p>
         </div>
     </section>
 
@@ -69,50 +76,80 @@
         <div class="container">
             <div class="content-grid">
                 <div class="contact-form">
-                    <h3 style="color: #ACCC0C; margin-bottom: 1.5rem;">Envie sua Mensagem</h3>
+                    <h3 style="color: #ACCC0C; margin-bottom: 2rem; font-size: 1.8rem; text-align: center;">Envie sua Mensagem</h3>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Nome Completo *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
                         </div>
                         <div class="form-group">
                             <label for="service">Serviço de Interesse</label>
                             <select id="service" name="service">
                                 <option value="">Selecione um serviço</option>
-                                <option value="loja">Loja</option>
-                                <option value="atelie">Ateliê das Flores</option>
-                                <option value="paisagismo">Paisagismo</option>
-                                <option value="producao">Produção Vegetal</option>
-                                <option value="restaurante">Cantinho Mineiro</option>
-                                <option value="corporativo">Venda Corporativa</option>
-                                <option value="loja-online">Loja Online</option>
+                                <option value="loja">Loja - Plantas e Acessórios</option>
+                                <option value="atelie">Ateliê das Flores - Arranjos Florais</option>
+                                <option value="paisagismo">Paisagismo - Projetos de Jardim</option>
+                                <option value="producao">Produção Vegetal - Mudas e Plantas</option>
+                                <option value="restaurante">Cantinho Mineiro - Restaurante</option>
+                                <option value="corporativo">Venda Corporativa - Empresas</option>
+                                <option value="loja-online">Loja Online - Compras Online</option>
+                                <option value="outros">Outros Serviços</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem *</label>
-                            <textarea id="message" name="message" placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Conte-nos como podemos ajudar você. Descreva seu projeto, suas necessidades ou tire suas dúvidas..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Enviar Mensagem
+                        </button>
                     </form>
                 </div>
                 <div class="content-text">
-                    <h3>Fale Conosco</h3>
-                    <p>Nossa equipe está sempre pronta para atender você com carinho e profissionalismo. Seja para tirar dúvidas, solicitar orçamentos ou agendar uma visita, estamos aqui para ajudar.</p>
-                    <p>Responderemos sua mensagem o mais breve possível, geralmente em até 24 horas.</p>
+                    <h3 style="color: #4E342E; margin-bottom: 1.5rem;">Por que Escolher a Garden Cerri?</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.5rem; margin-right: 1rem;">🏆</span>
+                            <p style="margin: 0;"><strong>Mais de 15 anos de experiência</strong> no mercado de floricultura e paisagismo</p>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.5rem; margin-right: 1rem;">👥</span>
+                            <p style="margin: 0;"><strong>Equipe especializada</strong> e apaixonada pelo que faz</p>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.5rem; margin-right: 1rem;">🌱</span>
+                            <p style="margin: 0;"><strong>Produtos de alta qualidade</strong> e plantas saudáveis</p>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.5rem; margin-right: 1rem;">💚</span>
+                            <p style="margin: 0;"><strong>Atendimento personalizado</strong> e consultoria gratuita</p>
+                        </div>
+                    </div>
                     
-                    <div style="margin-top: 2rem;">
-                        <h4 style="color: #ACCC0C; margin-bottom: 1rem;">Horário de Funcionamento</h4>
-                        <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
-                        <p><strong>Sábado:</strong> 8h às 14h</p>
-                        <p><strong>Domingo:</strong> 8h às 12h</p>
+                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                        <h4 style="color: #ACCC0C; margin-bottom: 1.5rem; font-size: 1.3rem;">⏰ Horário de Funcionamento</h4>
+                        <div style="display: grid; gap: 0.8rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 600;">Segunda a Sexta:</span>
+                                <span style="color: #28a745; font-weight: 600;">8h às 18h</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 600;">Sábado:</span>
+                                <span style="color: #28a745; font-weight: 600;">8h às 14h</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 600;">Domingo:</span>
+                                <span style="color: #28a745; font-weight: 600;">8h às 12h</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,37 +157,90 @@
             <div class="contact-info">
                 <div class="contact-card">
                     <div class="icon">📍</div>
-                    <h4>Endereço</h4>
-                    <p>R. 23, 549<br>Jardim Rio Claro, Rio Claro - SP<br>CEP: 13503-753</p>
+                    <h4>Nosso Endereço</h4>
+                    <p>R. 23, 549<br>Jardim Rio Claro<br>Rio Claro - SP<br>CEP: 13503-753</p>
+                    <a href="https://maps.google.com/?q=R.+23,+549+Jardim+Rio+Claro+Rio+Claro+SP" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; font-size: 0.9rem; padding: 10px 20px;">Ver no Mapa</a>
                 </div>
+                
                 <div class="contact-card">
                     <div class="icon">📞</div>
                     <h4>Telefone</h4>
-                    <p>(19) 30243382</p>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: #ACCC0C;">(19) 3024-3382</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Ligue para nós durante o horário comercial</p>
+                    <a href="tel:+551930243382" class="btn btn-secondary" style="margin-top: 1rem; font-size: 0.9rem; padding: 10px 20px;">Ligar Agora</a>
                 </div>
+                
                 <div class="contact-card">
                     <div class="icon">✉️</div>
                     <h4>E-mail</h4>
-                    <p>comercial@<br>gardencerri.com.br</p>
+                    <p style="font-size: 1.1rem; font-weight: 600; color: #ACCC0C;">comercial@gardencerri.com.br</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Resposta em até 24 horas</p>
+                    <a href="mailto:comercial@gardencerri.com.br" class="btn btn-secondary" style="margin-top: 1rem; font-size: 0.9rem; padding: 10px 20px;">Enviar E-mail</a>
                 </div>
+                
+                <div class="contact-card">
+                    <div class="icon">💬</div>
+                    <h4>WhatsApp</h4>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: #25D366;">(19) 99999-9999</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Atendimento rápido e direto</p>
+                    <a href="https://wa.me/5519999999999?text=Olá! Gostaria de mais informações sobre os serviços da Garden Cerri." target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 10px 20px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                        <svg style="width: 18px; height: 18px; margin-right: 8px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+                
                 <div class="contact-card">
                     <div class="icon">🌐</div>
                     <h4>Redes Sociais</h4>
-                    <p>@gardencerri<br>Garden Cerri</p>
+                    <p style="margin-bottom: 1.5rem;">Siga-nos e acompanhe nossos projetos</p>
+                    <div class="social-media-icons">
+                        <a href="https://instagram.com/gardencerri" target="_blank" class="social-icon instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/gardencerri" target="_blank" class="social-icon facebook" title="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5519999999999" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6C757D;">@gardencerri</p>
                 </div>
             </div>
 
             <div class="map-container">
-                <h3 style="color: #ACCC0C; margin-bottom: 1.5rem;">Nossa Localização</h3>
+                <h3>Nossa Localização</h3>
                 <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8234567890123!2d-47.5612345!3d-22.4123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%2023%2C%20549%20-%20Jardim%20Rio%20Claro%2C%20Rio%20Claro%20-%20SP%2C%2013503-753!5e0!3m2!1spt-BR!2sbr!4v1654789542873!5m2!1spt-BR!2sbr" 
-    width="100%" 
-    height="450" 
-    style="border:0; border-radius:10px;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.4234567890123!2d-47.5612345!3d-22.4123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8f8f8f8f8f8%3A0x8f8f8f8f8f8f8f8f!2sGarden%20Cerri!5e0!3m2!1spt-BR!2sbr!4v1654789542873!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius:15px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="https://maps.app.goo.gl/tfPX3jocNmXvGVVu5" 
+                       target="_blank" 
+                       class="btn btn-primary" 
+                       style="display: inline-flex; align-items: center; gap: 10px; font-size: 1rem; padding: 12px 25px;">
+                        <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Abrir no Google Maps
+                    </a>
+                </div>
+                <p style="margin-top: 1rem; color: #6C757D; font-size: 0.95rem;">
+                    📍 Estamos localizados no coração de Rio Claro, com fácil acesso e estacionamento disponível
+                </p>
             </div>
         </div>
     </section>
@@ -158,13 +248,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- Substituir todo o conteúdo do footer-content -->
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20branca-DtmB5xYHmd5rZQv2LFgRy7I6Y5xGig.png" alt="Garden Cerri" class="logo-white">
                     </div>
-                    <p>Cultivando beleza e tradição há mais de 12 anos.</p>
+                    <p>Cultivando beleza e tradição há mais de 15 anos.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
@@ -188,16 +277,16 @@
                     </div>
                     <div class="contact-line">
                         <span class="contact-icon">📞</span>
-                        <p>(19) 30243382</p>
+                        <p>(19) 3024-3382</p>
                     </div>
                     <div class="contact-line">
                         <span class="contact-icon">✉️</span>
-                        <p>contato@gardencerri.com.br</p>
+                        <p>comercial@gardencerri.com.br</p>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link">📷</a>
-                        <a href="#" class="social-link">📱</a>
-                        <a href="#" class="social-link">📘</a>
+                        <a href="https://instagram.com/gardencerri" class="social-link">📷</a>
+                        <a href="https://wa.me/5519999999999" class="social-link">💬</a>
+                        <a href="https://facebook.com/gardencerri" class="social-link">📘</a>
                     </div>
                 </div>
             </div>
@@ -207,25 +296,16 @@
         </div>
     </footer>
 
+    <!-- Botão flutuante WhatsApp Professional -->
+    <a href="https://wa.me/5519999999999?text=Olá! Gostaria de mais informações sobre os serviços da Garden Cerri." 
+       target="_blank" 
+       class="whatsapp-float"
+       title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
     <script src="script.js"></script>
-    <script>
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (validateForm(this)) {
-                const submitBtn = this.querySelector('button[type="submit"]');
-                addLoadingState(submitBtn);
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-                    this.reset();
-                }, 2000);
-            } else {
-                alert('Por favor, preencha todos os campos obrigatórios.');
-            }
-        });
-    </script>
 </body>
 </html>
