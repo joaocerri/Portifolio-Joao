@@ -447,13 +447,33 @@ class GalleryCarousel {
     this.slides = container.querySelectorAll(".gallery-slide")
     this.prevBtn = container.querySelector(".gallery-nav.prev")
     this.nextBtn = container.querySelector(".gallery-nav.next")
-    this.indicators = container.querySelectorAll(".gallery-indicator")
     this.counter = container.querySelector(".gallery-counter")
 
     this.currentSlide = 0
     this.totalSlides = this.slides.length
 
+    // Criar indicadores dinamicamente
+    this.indicatorsContainer = container.parentElement.querySelector(".gallery-indicators")
+    if (!this.indicatorsContainer) {
+      this.indicatorsContainer = document.createElement("div")
+      this.indicatorsContainer.className = "gallery-indicators"
+      this.container.parentElement.appendChild(this.indicatorsContainer)
+    }
+    this.createIndicators()
+
     this.init()
+  }
+
+  createIndicators() {
+    this.indicatorsContainer.innerHTML = ""
+    this.indicators = []
+    for (let i = 0; i < this.totalSlides; i++) {
+      const indicator = document.createElement("span")
+      indicator.className = "gallery-indicator"
+      if (i === 0) indicator.classList.add("active")
+      this.indicatorsContainer.appendChild(indicator)
+      this.indicators.push(indicator)
+    }
   }
 
   init() {
