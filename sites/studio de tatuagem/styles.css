@@ -1054,3 +1054,7 @@ footer {
   display: block;
   object-fit: contain;
 }
+
+.golden-text {
+  color: var(--secondary-color);
+}
