@@ -439,7 +439,7 @@ window.addEventListener(
   }, 10),
 )
 
-// Carrossel de Galeria
+// Carrossel de Galeria com Lightbox
 class GalleryCarousel {
   constructor(container) {
     this.container = container
@@ -460,6 +460,9 @@ class GalleryCarousel {
       this.container.parentElement.appendChild(this.indicatorsContainer)
     }
     this.createIndicators()
+
+    // Inicializar lightbox
+    this.initLightbox()
 
     this.init()
   }
@@ -540,6 +543,117 @@ class GalleryCarousel {
     if (this.autoPlayInterval) {
       clearInterval(this.autoPlayInterval)
     }
+  }
+
+  // Funcionalidade do Lightbox
+  initLightbox() {
+    // Criar estrutura do lightbox se não existir
+    if (!document.getElementById("lightbox")) {
+      const lightbox = document.createElement("div")
+      lightbox.id = "lightbox"
+      lightbox.className = "lightbox"
+      lightbox.innerHTML = `
+        <div class="lightbox-content">
+          <span class="lightbox-close">&times;</span>
+          <span class="lightbox-counter"></span>
+          <img class="lightbox-image" src="/placeholder.svg" alt="">
+          <button class="lightbox-nav prev">‹</button>
+          <button class="lightbox-nav next">›</button>
+          <div class="lightbox-caption">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+      `
+      document.body.appendChild(lightbox)
+
+      // Event listeners do lightbox
+      const lightboxClose = lightbox.querySelector(".lightbox-close")
+      const lightboxPrev = lightbox.querySelector(".lightbox-nav.prev")
+      const lightboxNext = lightbox.querySelector(".lightbox-nav.next")
+
+      lightboxClose.addEventListener("click", () => this.closeLightbox())
+      lightboxPrev.addEventListener("click", () => this.lightboxPrevImage())
+      lightboxNext.addEventListener("click", () => this.lightboxNextImage())
+
+      // Fechar ao clicar fora da imagem
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          this.closeLightbox()
+        }
+      })
+
+      // Fechar com ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+          this.closeLightbox()
+        }
+        if (e.key === "ArrowLeft" && lightbox.classList.contains("active")) {
+          this.lightboxPrevImage()
+        }
+        if (e.key === "ArrowRight" && lightbox.classList.contains("active")) {
+          this.lightboxNextImage()
+        }
+      })
+    }
+
+    // Adicionar event listeners às imagens
+    this.slides.forEach((slide, index) => {
+      const img = slide.querySelector("img")
+      if (img) {
+        img.addEventListener("click", () => this.openLightbox(index))
+      }
+    })
+  }
+
+  openLightbox(index) {
+    const lightbox = document.getElementById("lightbox")
+    const lightboxImage = lightbox.querySelector(".lightbox-image")
+    const lightboxCaption = lightbox.querySelector(".lightbox-caption")
+    const lightboxCounter = lightbox.querySelector(".lightbox-counter")
+
+    this.lightboxCurrentIndex = index
+
+    const currentSlide = this.slides[index]
+    const img = currentSlide.querySelector("img")
+    const caption = currentSlide.querySelector(".gallery-caption")
+
+    lightboxImage.src = img.src
+    lightboxImage.alt = img.alt
+
+    if (caption) {
+      const captionTitle = caption.querySelector("h4")
+      const captionText = caption.querySelector("p")
+      lightboxCaption.querySelector("h4").textContent = captionTitle ? captionTitle.textContent : ""
+      lightboxCaption.querySelector("p").textContent = captionText ? captionText.textContent : ""
+    }
+
+    lightboxCounter.textContent = `${index + 1} / ${this.totalSlides}`
+
+    lightbox.classList.add("active")
+    document.body.style.overflow = "hidden"
+
+    // Pausar autoplay quando lightbox estiver aberto
+    this.stopAutoPlay()
+  }
+
+  closeLightbox() {
+    const lightbox = document.getElementById("lightbox")
+    lightbox.classList.remove("active")
+    document.body.style.overflow = "auto"
+
+    // Retomar autoplay
+    this.startAutoPlay()
+  }
+
+  lightboxNextImage() {
+    this.lightboxCurrentIndex = (this.lightboxCurrentIndex + 1) % this.totalSlides
+    this.openLightbox(this.lightboxCurrentIndex)
+  }
+
+  lightboxPrevImage() {
+    this.lightboxCurrentIndex = (this.lightboxCurrentIndex - 1 + this.totalSlides) % this.totalSlides
+    this.openLightbox(this.lightboxCurrentIndex)
   }
 }
 
