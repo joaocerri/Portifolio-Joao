@@ -575,7 +575,7 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 12rem;
   overflow: hidden;
 }
 
