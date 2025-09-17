@@ -37,6 +37,42 @@ const productData = {
       price: "R$ 299,90",
       image: "https://via.placeholder.com/400x400?text=Jaqueta+Couro",
     },
+    {
+      id: 7,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 8,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 9,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    }, 
+    {
+      id: 10,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 11,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 12,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    }, 
   ],
   feminina: [
     {
@@ -70,6 +106,42 @@ const productData = {
       price: "R$ 229,90",
       image: "https://via.placeholder.com/400x400?text=Conjunto+Moletom",
     },
+    {
+      id: 7,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 8,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 9,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 10,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 11,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 12,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    }, 
   ],
   infantil: [
     {
@@ -108,6 +180,42 @@ const productData = {
       price: "R$ 79,90",
       image: "https://via.placeholder.com/400x400?text=Pijama+Infantil",
     },
+    {
+      id: 7,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 8,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 9,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 10,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 11,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 12,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    }, 
   ],
   calcados: [
     { id: 1, name: "Tênis Casual", price: "R$ 179,90", image: "https://via.placeholder.com/400x400?text=Tênis+Casual" },
@@ -153,11 +261,29 @@ const productData = {
       image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
     },
     {
-      id: 8,
+      id: 9,
       name: "Bota Feminina",
       price: "R$ 229,90",
       image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
     },  
+    {
+      id: 10,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 11,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 12,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    }, 
   ],
 }
 
