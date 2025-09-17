@@ -41,10 +41,18 @@ html {
 /* Category indicators */
 .category-indicator {
   transition: all 0.3s ease;
+  background-color: #000;
+  border-color: #000;
+  opacity: 1;
 }
 
 .category-indicator.active {
   transform: scale(1.25);
+  background-color: #000;
+}
+
+.category-indicator:hover {
+  background-color: #000;
 }
 
 /* Product card styles */
