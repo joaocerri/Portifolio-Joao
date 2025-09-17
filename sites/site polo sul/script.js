@@ -267,6 +267,9 @@ function initializeCategoryCarousel() {
     indicator.addEventListener("click", () => showSlide(index))
   })
 
+  // Normalize initial state (ensure only the correct indicator is active)
+  showSlide(categoryCurrentIndex)
+
   // Autoplay
   function startAutoplay() {
     categoryAutoplayInterval = setInterval(nextSlide, 5000)
