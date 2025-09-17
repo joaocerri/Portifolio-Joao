@@ -129,13 +129,35 @@ const productData = {
       price: "R$ 149,90",
       image: "https://via.placeholder.com/400x400?text=Tênis+Infantil",
     },
-    { id: 5, name: "Chinelo", price: "R$ 59,90", image: "https://via.placeholder.com/400x400?text=Chinelo" },
+    { id: 5, 
+      name: "Chinelo", 
+      price: "R$ 59,90", 
+      image: "https://via.placeholder.com/400x400?text=Chinelo" 
+    },
     {
       id: 6,
       name: "Bota Feminina",
       price: "R$ 229,90",
       image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
     },
+    {
+      id: 7,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+     {
+      id: 8,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },
+    {
+      id: 8,
+      name: "Bota Feminina",
+      price: "R$ 229,90",
+      image: "https://via.placeholder.com/400x400?text=Bota+Feminina",
+    },  
   ],
 }
 
