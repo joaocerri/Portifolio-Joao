@@ -128,7 +128,7 @@ const productData = {
       price: "R$ 229,90",
       image: "images/",
     },
-    /*{
+    {
       id: 10,
       name: "Bota Feminina",
       price: "R$ 229,90",
@@ -145,7 +145,7 @@ const productData = {
       name: "Bota Feminina",
       price: "R$ 229,90",
       image: "images/",
-    },*/ 
+    }, 
   ],
   infantil: [
     {
