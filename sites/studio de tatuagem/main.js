@@ -125,25 +125,31 @@ function initHeader() {
     } else {
       header.classList.remove("scrolled")
     }
+  })
 
-    // Atualiza o link ativo no menu
-    let current = ""
+  // IntersectionObserver para o menu ativo
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -79% 0px",
+    threshold: 0
+  }
 
-    document.querySelectorAll("section").forEach((section) => {
-      const sectionTop = section.offsetTop
-      const sectionHeight = section.clientHeight
-
-      if (window.scrollY >= sectionTop - 150) {
-        current = section.getAttribute("id")
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id")
+        menuLinks.forEach((link) => {
+          link.classList.remove("active")
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active")
+          }
+        })
       }
     })
+  }, observerOptions)
 
-    menuLinks.forEach((link) => {
-      link.classList.remove("active")
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active")
-      }
-    })
+  document.querySelectorAll("section").forEach((section) => {
+    sectionObserver.observe(section)
   })
 }
 

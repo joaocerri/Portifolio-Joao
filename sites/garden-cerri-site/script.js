@@ -484,11 +484,20 @@ class GalleryCarousel {
     this.updateIndicators()
 
     // Event listeners
-    this.prevBtn.addEventListener("click", () => this.prevSlide())
-    this.nextBtn.addEventListener("click", () => this.nextSlide())
+    this.prevBtn.addEventListener("click", () => {
+      this.prevSlide()
+      this.resetAutoPlay()
+    })
+    this.nextBtn.addEventListener("click", () => {
+      this.nextSlide()
+      this.resetAutoPlay()
+    })
 
     this.indicators.forEach((indicator, index) => {
-      indicator.addEventListener("click", () => this.goToSlide(index))
+      indicator.addEventListener("click", () => {
+        this.goToSlide(index)
+        this.resetAutoPlay()
+      })
     })
 
     // Auto-play (opcional)
@@ -543,6 +552,11 @@ class GalleryCarousel {
     if (this.autoPlayInterval) {
       clearInterval(this.autoPlayInterval)
     }
+  }
+
+  resetAutoPlay() {
+    this.stopAutoPlay()
+    this.startAutoPlay()
   }
 
   // Funcionalidade do Lightbox

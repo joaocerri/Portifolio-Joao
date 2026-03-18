@@ -68,7 +68,7 @@ function updateCountdown() {
     const now = new Date().getTime();
     const endTime = now + (2 * 60 * 60 * 1000) + (15 * 60 * 1000) + (30 * 1000); // 2h 15m 30s from now
     
-    setInterval(() => {
+    const timerInterval = setInterval(() => {
         const currentTime = new Date().getTime();
         const timeLeft = endTime - currentTime;
         
@@ -84,6 +84,7 @@ function updateCountdown() {
             document.getElementById('hours').textContent = '00';
             document.getElementById('minutes').textContent = '00';
             document.getElementById('seconds').textContent = '00';
+            clearInterval(timerInterval);
         }
     }, 1000);
 }

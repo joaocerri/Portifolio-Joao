@@ -1,12 +1,4 @@
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+const navbar = document.getElementById('navbar');
 
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
@@ -286,31 +278,7 @@ document.querySelectorAll('.service-card, .testimonial-card, .gallery-item').for
     observer.observe(el);
 });
 
-// Parallax effect for hero section (subtle)
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero && window.innerWidth > 768) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-});
-
-// Auto-hide mobile menu on scroll
-let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (currentScroll > lastScrollTop && navMenu.classList.contains('active')) {
-        // Scrolling down - hide mobile menu
-        navMenu.classList.remove('active');
-        const spans = hamburger.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
-    
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+// Scroll listeners unificados usando throttle no fim do arquivo
 
 // Enhanced form validation with real-time feedback
 document.addEventListener('DOMContentLoaded', function() {
@@ -420,8 +388,33 @@ function throttle(func, limit) {
     }
 }
 
-// Apply throttling to scroll events
+let lastScrollTop = 0;
 window.addEventListener('scroll', throttle(function() {
-    // Navbar scroll effect (already defined above)
-    // Parallax effect (already defined above)
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Navbar scroll effect
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero');
+    if (hero && window.innerWidth > 768) {
+        hero.style.transform = `translateY(${currentScroll * 0.3}px)`;
+    }
+    
+    // Auto-hide mobile menu on scroll
+    if (currentScroll > lastScrollTop && typeof navMenu !== 'undefined' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const spans = document.getElementById('hamburger').querySelectorAll('span');
+        if(spans && spans.length >= 3){
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, 16)); // ~60fps

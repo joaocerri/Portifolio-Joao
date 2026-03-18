@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
   })
 
-  // Menu mobile
   btnMobile.addEventListener("click", () => {
     nav.classList.toggle("active")
     const isActive = nav.classList.contains("active")
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Fechar menu ao clicar em um item
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
       nav.classList.remove("active")
@@ -67,23 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Animação de elementos ao scroll
+  // Animação de elementos ao scroll (removido event listener desnecessário, mantido stub)
   function animateOnScroll() {
     const elements = document.querySelectorAll("[data-aos]")
-
     elements.forEach((element) => {
       const elementPosition = element.getBoundingClientRect().top
       const windowHeight = window.innerHeight
-
       if (elementPosition < windowHeight - 100) {
         element.classList.add("aos-animate")
       }
     })
   }
-
-  // Inicializar animações
-  window.addEventListener("scroll", animateOnScroll)
-  animateOnScroll() // Executar uma vez no carregamento
+  // Removido chamador via scroll para evitar perdas de framerate em elementos nulos
 
   // Smooth scroll para links internos
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -105,16 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   // Adicionar classe active aos links do menu baseado na seção atual
-  function updateActiveMenu() {
-    const sections = document.querySelectorAll("section")
-    const scrollPos = window.scrollY + 100
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -79% 0px", // Margens para detecção ativa da visualização de seção atual
+    threshold: 0
+  }
 
-    sections.forEach((section) => {
-      const top = section.offsetTop
-      const bottom = top + section.offsetHeight
-      const id = section.getAttribute("id")
-
-      if (scrollPos >= top && scrollPos <= bottom) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id")
         menuItems.forEach((item) => {
           item.classList.remove("active")
           if (item.getAttribute("href") === `#${id}`) {
@@ -123,10 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
     })
-  }
+  }, observerOptions)
 
-  window.addEventListener("scroll", updateActiveMenu)
-  updateActiveMenu() // Executar uma vez no carregamento
+  document.querySelectorAll("section").forEach((section) => {
+    sectionObserver.observe(section)
+  })
 
   // Carousel functionality
   function initCarousel() {
@@ -179,23 +173,40 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCarousel()
       }
 
+      function resetInterval() {
+        clearInterval(autoPlayInterval)
+        autoPlayInterval = setInterval(autoAdvance, 5000)
+      }
+
       // Event listeners
-      nextBtn.addEventListener("click", nextSlide)
-      prevBtn.addEventListener("click", prevSlide)
+      nextBtn.addEventListener("click", () => {
+        nextSlide()
+        resetInterval()
+      })
+      
+      prevBtn.addEventListener("click", () => {
+        prevSlide()
+        resetInterval()
+      })
 
       dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => goToSlide(index))
+        dot.addEventListener("click", () => {
+          goToSlide(index)
+          resetInterval()
+        })
       })
 
       // Auto-play (optional)
-      setInterval(() => {
+      function autoAdvance() {
         if (currentSlide === slides.length - 1) {
           currentSlide = 0
         } else {
           currentSlide++
         }
         updateCarousel()
-      }, 5000)
+      }
+      
+      let autoPlayInterval = setInterval(autoAdvance, 5000)
 
       // Initialize
       updateCarousel()
@@ -226,7 +237,137 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  // Dynamic Project Data
+  const projectData = {
+    clientes: [
+      {
+        title: "Flora Cerri",
+        category: "Site Institucional",
+        description: "Site completo com cardápio digital, sistema de reservas online e integração com principais plataformas de delivery. Aumento de 40% nas reservas online.",
+        image: "./assets/print_floracerri.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/Flora Cerri/index.html",
+        codeLink: ""
+      }
+    ],
+    pessoais: [
+      {
+        title: "Página para empresa de advocacia",
+        category: "Landing Page",
+        description: "Landing Page completa integrada com responsividade, aba sobre, áreas de atuação, mostruário da equipe, formulário de contato, whatsapp e redes sociais.",
+        image: "./assets/print_advocacia.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/pagina advocacia/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/pagina%20advocacia"
+      },
+      {
+        title: "Página para fotógrafo",
+        category: "Landing Page",
+        description: "Landing Page completa, responsiva com portifólio integrado, aba de serviços, depoimentos e contato com formulário, redes sociais e whatsapp.",
+        image: "./assets/print_fotografo.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/pagina de fotografo/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/pagina%20de%20fotografo"
+      },
+      {
+        title: "Loja de Suplementos",
+        category: "E-commerce",
+        description: "Loja Online integrada com carrinho, cupons de descontos, mais de 50 produtos, aba de contatos, finalizar pedido e metodo de filtragem por pesquisa ou filtros pre-definidos.",
+        image: "./assets/print_mnsuplementos.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/mnsuplementos/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/mnsuplementos"
+      },
+      {
+         title: "Site para Personal Trainer",
+         category: "Landing Page",
+         description: "Página completa, responsiva, animada, integrada com aba de detalhamento do serviço, planos, depoimentos, vídeo demonstrativo e formulário de contato.",
+         image: "./assets/print_personal.png",
+         techs: ["HTML5", "JavaScript", "CSS3"],
+         demoLink: "./sites/pagina para personal/index.html",
+         codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/pagina%20para%20personal"
+      },
+      {
+        title: "Página para estúdio de tatuagem",
+        category: "Dashboard",
+        description: "Landing Page responsiva, animada e integrada com portifólio, tipos de trabalhos, equipe de tatuadores e aba de contato com formulário e informações de comunicação.",
+        image: "./assets/print_tatuagem.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/studio de tatuagem/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/studio%20de%20tatuagem"
+      },
+      {
+        title: "Cardápio de Restaurante",
+        category: "Página Institucional",
+        description: "Cardápio virtual animado, integrado com página de apresentação do restaurante, mais de 15 itens, aba de pesquisa e botões de filtragem.",
+        image: "./assets/print_cantinho.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/cantinho-do-sabor/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/cantinho-do-sabor"
+      },
+      {
+        title: "Finance Dashboard",
+        category: "SPA – Single Page Application",
+        description: "Plataforma para organização de finanças, responsiva e pratica de ser utilizada e gerenciada. O projeto contribui para o controle financeiro do usuário.",
+        image: "./assets/print_financas.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/financial-dashboard/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/financial-dashboard"
+      }
+    ]
+  };
+
+  function renderProjects() {
+    Object.keys(projectData).forEach(type => {
+      const track = document.getElementById(`carousel-${type}`);
+      const dotsContainer = document.getElementById(`dots-${type}`);
+      if (!track || !dotsContainer) return;
+
+      track.innerHTML = '';
+      dotsContainer.innerHTML = '';
+
+      projectData[type].forEach((proj, index) => {
+        // Slide
+        const slide = document.createElement('div');
+        slide.className = `projeto-slide animate-scale ${index === 0 ? 'active' : ''}`;
+        
+        const techsHTML = proj.techs.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+        const codeLinkHTML = proj.codeLink ? `<a href="${proj.codeLink}" target="_blank" class="btn btn-secondary">
+                                            <i class="fab fa-github"></i> Código
+                                        </a>` : '';
+
+        slide.innerHTML = `
+            <div class="projeto-item animate-scale">
+                <div class="projeto-img">
+                    <img src="${proj.image}" alt="${proj.title}" class="interactive">
+                </div>
+                <div class="projeto-info">
+                    <span class="projeto-categoria">${proj.category}</span>
+                    <h3>${proj.title}</h3>
+                    <p>${proj.description}</p>
+                    <div class="projeto-tech">
+                        ${techsHTML}
+                    </div>
+                    <div class="projeto-links">
+                        <a href="${proj.demoLink}" target="_blank" class="btn btn-primary">Ver Demo</a>
+                        ${codeLinkHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+        track.appendChild(slide);
+
+        // Dot
+        const dot = document.createElement('span');
+        dot.className = `dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('data-slide', index);
+        dotsContainer.appendChild(dot);
+      });
+    });
+  }
+
   // Initialize portfolio features
+  renderProjects()
   initCarousel()
   initPortfolioTabs()
 })

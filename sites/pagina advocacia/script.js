@@ -38,28 +38,26 @@ window.addEventListener("scroll", () => {
   } else {
     backToTop.classList.remove("active")
   }
-
-  // Fade in elements on scroll
-  fadeElements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top
-    const windowHeight = window.innerHeight
-
-    if (elementPosition < windowHeight - 100) {
-      element.classList.add("active")
-    }
-  })
 })
 
-// Ativar elementos visíveis no carregamento inicial
-document.addEventListener("DOMContentLoaded", () => {
-  fadeElements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top
-    const windowHeight = window.innerHeight
+// Fade in elements on scroll using IntersectionObserver
+const fadeObserverOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+}
 
-    if (elementPosition < windowHeight - 100) {
-      element.classList.add("active")
+const fadeObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active")
+      observer.unobserve(entry.target)
     }
   })
+}, fadeObserverOptions)
+
+// Ativar observer nos elementos
+fadeElements.forEach((element) => {
+  fadeObserver.observe(element)
 })
 
 // Validação do formulário

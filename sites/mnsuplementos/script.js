@@ -925,27 +925,31 @@ function setupEventListeners() {
     }
   })
 
-  // Scroll spy para navegação
-  window.addEventListener("scroll", () => {
-    const sections = ["home", "categorias", "produtos", "contato"]
-    const scrollPos = window.scrollY + 100
+  // Scroll spy usando IntersectionObserver
+  const sectionObserverOptions = {
+    root: null,
+    rootMargin: "-20% 0px -79% 0px",
+    threshold: 0
+  }
 
-    sections.forEach((sectionId) => {
-      const section = document.getElementById(sectionId)
-      if (section) {
-        const sectionTop = section.offsetTop
-        const sectionHeight = section.offsetHeight
-
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-          document.querySelectorAll(".nav-link").forEach((link) => {
-            link.classList.remove("active")
-            if (link.getAttribute("href") === `#${sectionId}`) {
-              link.classList.add("active")
-            }
-          })
-        }
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id")
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active")
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active")
+          }
+        })
       }
     })
+  }, sectionObserverOptions)
+
+  const sectionsToObserve = ["home", "categorias", "produtos", "contato"]
+  sectionsToObserve.forEach((sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) sectionObserver.observe(section)
   })
 
   // Fechar modal com ESC

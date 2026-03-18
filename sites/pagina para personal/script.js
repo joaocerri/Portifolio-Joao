@@ -30,7 +30,7 @@ function showTestimonial(index) {
   })
 }
 
-function changeTestimonial(direction) {
+function changeTestimonial(direction, isManual = true) {
   currentTestimonialIndex += direction
 
   if (currentTestimonialIndex >= testimonials.length) {
@@ -40,17 +40,26 @@ function changeTestimonial(direction) {
   }
 
   showTestimonial(currentTestimonialIndex)
+  if (isManual) resetTestimonialInterval()
 }
 
 function currentTestimonial(index) {
   currentTestimonialIndex = index - 1
   showTestimonial(currentTestimonialIndex)
+  resetTestimonialInterval()
 }
 
 // Auto-rotate testimonials
-setInterval(() => {
-  changeTestimonial(1)
+let testimonialInterval = setInterval(() => {
+  changeTestimonial(1, false)
 }, 5000)
+
+function resetTestimonialInterval() {
+  clearInterval(testimonialInterval)
+  testimonialInterval = setInterval(() => {
+    changeTestimonial(1, false)
+  }, 5000)
+}
 
 // Smooth scrolling function
 function scrollToSection(sectionId) {
@@ -116,32 +125,33 @@ document.addEventListener("DOMContentLoaded", () => {
 let lastScrollTop = 0
 const scrollThreshold = 100
 let isScrollingDown = false
+const stickyHeader = document.querySelector(".header") // cached
 
 window.addEventListener("scroll", () => {
-  const header = document.querySelector(".header")
+  if (!stickyHeader) return;
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop
 
   // Change header background based on scroll position
   if (currentScroll > 100) {
-    header.style.background = "rgba(0, 0, 0, 0.98)"
+    stickyHeader.style.background = "rgba(0, 0, 0, 0.98)"
   } else {
-    header.style.background = "rgba(0, 0, 0, 0.95)"
+    stickyHeader.style.background = "rgba(0, 0, 0, 0.95)"
   }
 
   // Hide/show header based on scroll direction
   if (currentScroll > scrollThreshold) {
     if (currentScroll > lastScrollTop && !isScrollingDown) {
       // Scrolling down - hide header
-      header.classList.add("hidden")
+      stickyHeader.classList.add("hidden")
       isScrollingDown = true
     } else if (currentScroll < lastScrollTop && isScrollingDown) {
       // Scrolling up - show header
-      header.classList.remove("hidden")
+      stickyHeader.classList.remove("hidden")
       isScrollingDown = false
     }
   } else {
     // Always show header when near top
-    header.classList.remove("hidden")
+    stickyHeader.classList.remove("hidden")
     isScrollingDown = false
   }
 
