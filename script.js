@@ -241,6 +241,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectData = {
     clientes: [
       {
+        title: "Loja Polo Sul",
+        category: "Landing Page",
+        description: "Landing Page profissional integrado com vitrine composta com mais de 20 produtos com direcionamento para o whatsapp com mensagem automatica, redes sociais e Loja Virtual.",
+        image: "./assets/print_polosul.png",
+        techs: ["TypeScript", "HTML5", "CSS3"],
+        demoLink: "./sites/site polo sul/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/site%20polo%20sul"
+      },
+      {
+        title: "Garden Cerri",
+        category: "Site Institucional",
+        description: "Página institucional profissional com ramificações para cada nicho da empresa, integrado com formulário de contato, whatsapp, redes sociais e Loja Virtual.",
+        image: "./assets/print_gardencerri.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/garden-cerri-site/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/garden-cerri-site"
+      },
+      {
         title: "Flora Cerri",
         category: "Site Institucional",
         description: "Site completo com cardápio digital, sistema de reservas online e integração com principais plataformas de delivery. Aumento de 40% nas reservas online.",
