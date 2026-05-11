@@ -331,6 +331,15 @@ document.addEventListener("DOMContentLoaded", () => {
         techs: ["HTML5", "JavaScript", "CSS3"],
         demoLink: "./sites/financial-dashboard/index.html",
         codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/financial-dashboard"
+      },
+      {
+        title: "Catalogo Proteses Capilar",
+        category: "SPA – Single Page Application",
+        description: "Plataforma institucional para empresa de prótese capilar, desenvolvida para apresentar serviços e facilitar o contato com clientesPlataforma institucional para empresa de prótese capilar, desenvolvida para apresentar serviços e facilitar o contato com clientes",
+        image: "./assets/print_protese.png",
+        techs: ["HTML5", "JavaScript", "CSS3"],
+        demoLink: "./sites/catalogoProteses/index.html",
+        codeLink: "https://github.com/joaocerri/Portifolio-Joao/tree/main/sites/catalogoProteses"
       }
     ]
   };
