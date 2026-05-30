@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Capilar | Catálogo de Próteses Profissionais</title>
+    <meta name="description" content="Catálogo completo de próteses capilares profissionais. Micropele, Lace, Híbrida e muito mais. Conheça nossos modelos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -38,13 +39,25 @@
                 <div class="price-inputs">
                     <input type="number" id="price-min" placeholder="Mín" min="0">
                     <span class="divider">até</span>
-                    <input type="number" id="price-max" placeholder="Máx" min="0"x>
+                    <input type="number" id="price-max" placeholder="Máx" min="0">
+                </div>
+            </div>
+
+            <div class="filter-group view-toggle-group">
+                <label>Visualização</label>
+                <div class="view-toggle" role="group" aria-label="Modo de visualização">
+                    <button class="view-btn" id="btn-view-grid" title="Grade" aria-pressed="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    </button>
+                    <button class="view-btn" id="btn-view-list" title="Lista" aria-pressed="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </button>
                 </div>
             </div>
         </section>
 
         <div id="product-grid" class="product-grid">
-            </div>
+        </div>
     </main>
 
     <div id="product-modal" class="modal" aria-hidden="true">
@@ -66,6 +79,17 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Link discreto para o admin no rodapé -->
+    <footer style="text-align:center; padding: 24px; border-top: 1px solid var(--border); margin-top: auto;">
+        <a href="admin.html"
+           style="font-size: 0.75rem; color: var(--text-muted); text-decoration: none; opacity: 0.4; transition: opacity 0.3s;"
+           onmouseover="this.style.opacity='1'"
+           onmouseout="this.style.opacity='0.4'">
+            ⚙️ Área Administrativa
+        </a>
+    </footer>
+
+    <script src="js/banco.js"></script>
+    <script src="js/catalogo.js"></script>
 </body>
 </html>

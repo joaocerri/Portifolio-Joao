@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Elite Capilar — Gerenciamento de Produtos</title>
+    <meta name="description" content="Painel administrativo para gerenciamento do catálogo de próteses Elite Capilar.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- Overlay sidebar mobile -->
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<div class="admin-layout">
+
+    <!-- ─── SIDEBAR ─────────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar" aria-label="Navegação lateral">
+
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon"><img src="./assets/file.png" ></div>
+                <div class="logo-text">
+                    <span class="logo-title">Rafael Muller</span>
+                    <span class="logo-subtitle">Painel Admin</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <p class="nav-section-label">Gerenciamento</p>
+            <button class="nav-item active" id="nav-produtos" aria-current="page">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                Produtos
+                <span class="nav-badge" id="nav-badge-total">0</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn-catalog-link" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Ver Catálogo
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- ─── CONTEÚDO ─────────────────────────────────────────── -->
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-info">
+                <div class="topbar-title">Produtos</div>
+                <div class="topbar-subtitle" id="topbar-subtitle">carregando...</div>
+            </div>
+            <div class="topbar-actions">
+                <!-- Theme toggle -->
+                <button id="theme-toggle" class="btn-icon" aria-label="Alternar tema" title="Alternar tema">
+                    <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none; width: 18px; height: 18px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <!-- Toggle de visualização -->
+                <div class="view-toggle" role="group" aria-label="Modo de visualização">
+                    <button class="view-btn" id="btn-view-grid" title="Visualização em grade" aria-pressed="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    </button>
+                    <button class="view-btn" id="btn-view-list" title="Visualização em lista" aria-pressed="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </button>
+                </div>
+                <button class="btn-primary" id="btn-novo-produto">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Novo Produto
+                </button>
+            </div>
+        </header>
+
+        <!-- Conteúdo da página -->
+        <main class="page-content">
+
+            <!-- Toolbar de busca e ordenação -->
+            <div class="toolbar" role="search">
+                <div class="toolbar-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="search"
+                           id="admin-search"
+                           placeholder="Buscar por nome ou descrição..."
+                           autocomplete="off"
+                           aria-label="Buscar produtos">
+                </div>
+                <select id="sort-select" class="toolbar-select" aria-label="Ordenar por">
+                    <option value="">Padrão</option>
+                    <option value="preco-asc">Preço ↑</option>
+                    <option value="preco-desc">Preço ↓</option>
+                    <option value="nome-az">A → Z</option>
+                    <option value="nome-za">Z → A</option>
+                    <option value="recente">Mais recentes</option>
+                </select>
+                <span class="toolbar-count" id="prod-count"></span>
+            </div>
+
+            <!-- Grade de produtos (padrão) -->
+            <div id="products-grid" class="products-grid">
+                <!-- Preenchido via JS -->
+            </div>
+
+            <!-- Lista de produtos (alternativa) -->
+            <div id="products-list" class="products-list" hidden>
+                <!-- Preenchido via JS -->
+            </div>
+
+        </main>
+    </div>
+
+</div><!-- /admin-layout -->
+
+
+<!-- ══════════════════════════════════════════════
+     DRAWER — FORMULÁRIO
+══════════════════════════════════════════════ -->
+<div id="form-overlay" class="form-overlay" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <div id="form-drawer" class="form-drawer">
+
+        <div class="drawer-header">
+            <h2 class="drawer-title" id="drawer-title">Novo Produto</h2>
+            <button class="drawer-close" id="drawer-close" aria-label="Fechar">&times;</button>
+        </div>
+
+        <div class="drawer-body">
+            <form id="produto-form" novalidate autocomplete="off" style="display: flex; flex-direction: column; gap: 20px;">
+                <input type="hidden" id="field-id">
+
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label" for="field-nome">
+                        Nome do Produto <span class="required">*</span>
+                    </label>
+                    <input type="text" id="field-nome" class="form-input"
+                           placeholder="Ex: Micropele HD Invisible 0.03mm" maxlength="120">
+                </div>
+
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label" for="field-descricao">
+                        Descrição <span class="required">*</span>
+                    </label>
+                    <textarea id="field-descricao" class="form-textarea"
+                              placeholder="Características, materiais e indicações do produto..."
+                              rows="4" maxlength="600"></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label" for="field-preco">
+                        Preço (R$) <span class="required">*</span>
+                    </label>
+                    <div class="input-price-wrap">
+                        <span class="input-prefix">R$</span>
+                        <input type="number" id="field-preco" class="form-input has-prefix"
+                               placeholder="0,00" min="0.01" step="0.01">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label">Imagem do Produto (Link ou Arquivo)</label>
+                    
+                    <input type="url" id="field-imagem" class="form-input"
+                           placeholder="https://exemplo.com/imagem.jpg" style="margin-bottom: 10px;">
+                    
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size: 0.85rem; color: var(--text-dim); font-weight: 600;">OU</span>
+                        <input type="file" id="field-imagem-file" accept="image/*" class="form-input" style="padding: 8px 12px; cursor: pointer;">
+                    </div>
+                </div>
+
+                <!-- Preview da imagem no final do form -->
+                <div class="form-img-preview" id="form-img-preview-wrap" style="margin-bottom: 0;">
+                    <img id="img-preview" class="img-preview" alt="Preview">
+                    <div class="img-placeholder" id="img-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        <span>Preview da imagem</span>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="drawer-footer">
+            <button type="button" class="btn-cancel" id="btn-cancel">Cancelar</button>
+            <button type="submit" class="btn-submit" id="btn-submit" form="produto-form">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polyline points="20 6 9 17 4 12"/></svg>
+                <span id="btn-submit-text">Cadastrar Produto</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     CONFIRMAÇÃO DE EXCLUSÃO
+══════════════════════════════════════════════ -->
+<div id="confirm-overlay" class="confirm-overlay" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="confirm-dialog">
+        <div class="confirm-icon">🗑️</div>
+        <h3 class="confirm-title" id="confirm-title">Excluir Produto</h3>
+        <p class="confirm-desc">
+            Tem certeza que deseja excluir<br>
+            <span class="confirm-name" id="confirm-name"></span>?<br>
+            <strong>Esta ação não pode ser desfeita.</strong>
+        </p>
+        <div class="confirm-actions">
+            <button class="btn-outline" id="btn-cancel-delete">Cancelar</button>
+            <button class="btn-danger"  id="btn-confirm-delete">Sim, excluir</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Toast container -->
+<div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+<script src="js/banco.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
