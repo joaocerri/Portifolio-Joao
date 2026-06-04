@@ -1,11 +1,11 @@
 /**
  * banco.js — Camada de Abstração do IndexedDB
- * Elite Capilar | v3 — sem categorias
+ * Elite Capilar | v4 — migração resiliente
  */
 
 const BancoDB = (() => {
     const DB_NAME    = 'EliteCapilarDB';
-    const DB_VERSION = 3;
+    const DB_VERSION = 4;
     const STORE_PROD = 'produtos';
 
     let db = null;
@@ -41,14 +41,21 @@ const BancoDB = (() => {
                 const database   = e.target.result;
                 const oldVersion = e.oldVersion;
 
-                // v1: store de produtos
-                if (oldVersion < 1) {
-                    const store = database.createObjectStore(STORE_PROD, { keyPath: 'id', autoIncrement: true });
-                    store.createIndex('nome',  'nome',  { unique: false });
+                // Garante a store de produtos mesmo se o navegador tiver um
+                // banco antigo/incompleto salvo de uma versão anterior.
+                const store = database.objectStoreNames.contains(STORE_PROD)
+                    ? e.target.transaction.objectStore(STORE_PROD)
+                    : database.createObjectStore(STORE_PROD, { keyPath: 'id', autoIncrement: true });
+
+                if (!store.indexNames.contains('nome')) {
+                    store.createIndex('nome', 'nome', { unique: false });
+                }
+
+                if (!store.indexNames.contains('preco')) {
                     store.createIndex('preco', 'preco', { unique: false });
                 }
 
-                // v2→v3: remove store de categorias se existir
+                // Remove store de categorias se existir.
                 if (database.objectStoreNames.contains('categorias')) {
                     database.deleteObjectStore('categorias');
                 }

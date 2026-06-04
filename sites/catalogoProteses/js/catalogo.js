@@ -15,6 +15,14 @@ const btnViewGrid   = document.getElementById('btn-view-grid');
 const btnViewList   = document.getElementById('btn-view-list');
 
 let viewMode = 'grid'; // 'grid' | 'list'
+let renderToken = 0;
+let modalCloseTimer = null;
+
+const CATALOG_FADE_MS = 180;
+const MODAL_FADE_MS = 220;
+
+const shouldReduceMotion = () =>
+    window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Formata número para moeda BRL */
 const formatCurrency = (valor) =>
@@ -22,13 +30,16 @@ const formatCurrency = (valor) =>
 
 // ─── Renderização ──────────────────────────────────────────────────────────────
 
-function renderCatalog(lista) {
-    // Atualiza a classe do container com base no viewMode
-    grid.className = viewMode === 'grid' ? 'product-grid' : 'product-list';
+function getCatalogClass() {
+    return viewMode === 'grid' ? 'product-grid' : 'product-list';
+}
+
+function paintCatalog(lista) {
+    grid.className = getCatalogClass();
 
     if (lista.length === 0) {
         grid.innerHTML = `
-            <div style="text-align: center; padding: 60px; opacity: 0.6; color: var(--text-muted); width: 100%;">
+            <div class="catalog-message">
                 <p>Nenhum produto encontrado para estes filtros.</p>
             </div>`;
         return;
@@ -50,6 +61,33 @@ function renderCatalog(lista) {
     `).join('');
 }
 
+function renderCatalog(lista) {
+    const token = ++renderToken;
+    const animateOut = grid.childElementCount > 0 && !shouldReduceMotion();
+
+    if (animateOut) {
+        grid.classList.remove('catalog-fade-in');
+        grid.classList.add('catalog-fade-out');
+    }
+
+    window.setTimeout(() => {
+        if (token !== renderToken) return;
+
+        paintCatalog(lista);
+        grid.classList.add('catalog-fade-in');
+    }, animateOut ? CATALOG_FADE_MS : 0);
+}
+
+function renderLoadError() {
+    renderToken++;
+    grid.className = getCatalogClass();
+    grid.innerHTML = `
+        <div class="catalog-message error">
+            <p>Erro ao carregar produtos. Por favor, recarregue a página.</p>
+        </div>`;
+    grid.classList.add('catalog-fade-in');
+}
+
 // ─── Filtros ───────────────────────────────────────────────────────────────────
 
 function applyFilters() {
@@ -57,7 +95,12 @@ function applyFilters() {
     const precoMin = parseFloat(minPriceInput.value) || 0;
     const precoMax = parseFloat(maxPriceInput.value) || Infinity;
 
-    BancoDB.search({ termo, precoMin, precoMax }).then(renderCatalog);
+    return BancoDB.search({ termo, precoMin, precoMax })
+        .then(renderCatalog)
+        .catch(err => {
+            console.error('Erro ao buscar produtos:', err);
+            renderLoadError();
+        });
 }
 
 // ─── View Toggle ───────────────────────────────────────────────────────────────
@@ -88,27 +131,53 @@ function openModal(id) {
         document.getElementById('modal-description').innerText = p.descricao;
         document.getElementById('modal-price').innerText   = formatCurrency(p.preco);
 
-        modal.style.display    = 'flex';
-        document.body.style.overflow = 'hidden';
+        openProductModal();
     });
 }
 
-document.getElementById('close-modal').onclick = () => {
-    modal.style.display          = 'none';
+function openProductModal() {
+    if (modalCloseTimer) {
+        window.clearTimeout(modalCloseTimer);
+        modalCloseTimer = null;
+    }
+
+    modal.classList.remove('is-closing');
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+
+    window.requestAnimationFrame(() => {
+        modal.classList.add('is-open');
+    });
+
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal() {
+    if (!modal.classList.contains('is-open')) return;
+
+    modal.classList.remove('is-open');
+    modal.classList.add('is-closing');
     document.body.style.overflow = 'auto';
-};
+
+    modalCloseTimer = window.setTimeout(() => {
+        modal.classList.remove('is-closing');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        modalCloseTimer = null;
+    }, shouldReduceMotion() ? 0 : MODAL_FADE_MS);
+}
+
+document.getElementById('close-modal').onclick = closeProductModal;
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.style.display          = 'none';
-        document.body.style.overflow = 'auto';
+        closeProductModal();
     }
 });
 
 window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-        modal.style.display          = 'none';
-        document.body.style.overflow = 'auto';
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeProductModal();
     }
 });
 
@@ -154,9 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => applyFilters())
         .catch(err => {
             console.error('Erro ao carregar catálogo:', err);
-            grid.innerHTML = `
-                <div style="text-align: center; padding: 60px; color: #e74c3c; width: 100%;">
-                    <p>Erro ao carregar produtos. Por favor, recarregue a página.</p>
-                </div>`;
+            renderLoadError();
         });
 });
